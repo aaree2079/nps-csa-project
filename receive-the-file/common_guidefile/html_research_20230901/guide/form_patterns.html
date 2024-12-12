@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>폼 패턴</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">Patterns</h3>
+
+<div class="code-preview">
+	<h4 class="form-label">Form Controls</h4>
+	<div class="row">
+		<div class="inp-group-controls">
+			<label for="id1" class="blind">아이디</label>
+			<input type="text" name="" id="id1" class="charLength12" placeholder="placeholder">
+			<button type="button" class="btn outlined">확인</button>
+		</div>
+	</div>
+	<div class="row">
+<div class="inp-group-controls full">
+	<label for="id2" class="blind">아이디</label>
+	<input type="text" name="" id="id2" class="inp-text" placeholder="placeholder">
+	<button type="button" class="btn outlined">확인</button>
+</div>
+	</div>
+	<div class="row">
+		<div class="inp-group-controls full">
+			<label for="id3">아이디</label>
+			<input type="text" name="" id="id3" class="inp-text">
+			<button type="button" class="btn outlined">확인</button>
+		</div>
+	</div>
+</div>
+<pre><code class="language-xml">
+&#x3C;div class=&#x22;inp-group-controls&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;test1&#x22; class=&#x22;blind&#x22;&#x3E;&#xC544;&#xC774;&#xB514;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;test1&#x22; class=&#x22;charLength12&#x22; placeholder=&#x22;placeholder&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-controls full&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;id2&#x22; class=&#x22;blind&#x22;&#x3E;&#xC544;&#xC774;&#xB514;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;id2&#x22; class=&#x22;inp-text&#x22; placeholder=&#x22;placeholder&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-controls full&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;test2&#x22;&#x3E;&#xC544;&#xC774;&#xB514;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;test2&#x22; class=&#x22;inp-text&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+<div class="code-preview">
+	<div class="row">
+		<div class="form-label">입력내용 지우기</div>
+		<div class="inp-group-clear">
+			<label for="clear1" class="blind">아이디</label>
+			<input type="text" name="" id="clear1" class="inp-text charLength10" placeholder="placeholder">
+			<button type="button" class="btn-clear">입력내용 지우기</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="inp-group-clear full">
+			<label for="clear2" class="blind">아이디</label>
+			<input type="text" name="" id="clear2" class="inp-text" placeholder="placeholder">
+			<button type="button" class="btn-clear">입력내용 지우기</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="inp-group-clear full">
+			<label for="clear3">아이디</label>
+			<input type="text" name="" id="clear3" class="inp-text">
+			<button type="button" class="btn-clear">입력내용 지우기</button>
+		</div>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;inp-group-clear&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;clear1&#x22; class=&#x22;blind&#x22;&#x3E;&#xC544;&#xC774;&#xB514;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;clear1&#x22; class=&#x22;inp-text charLength10&#x22; placeholder=&#x22;placeholder&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-clear&#x22;&#x3E;&#xC785;&#xB825;&#xB0B4;&#xC6A9; &#xC9C0;&#xC6B0;&#xAE30;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-clear full&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;clear2&#x22; class=&#x22;blind&#x22;&#x3E;&#xC544;&#xC774;&#xB514;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;clear2&#x22; class=&#x22;inp-text&#x22; placeholder=&#x22;placeholder&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-clear&#x22;&#x3E;&#xC785;&#xB825;&#xB0B4;&#xC6A9; &#xC9C0;&#xC6B0;&#xAE30;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-clear full&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;clear3&#x22;&#x3E;&#xC544;&#xC774;&#xB514;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;clear3&#x22; class=&#x22;inp-text&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-clear&#x22;&#x3E;&#xC785;&#xB825;&#xB0B4;&#xC6A9; &#xC9C0;&#xC6B0;&#xAE30;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+<div class="code-preview">
+	<div class="form-label">검색</div>
+	<div class="row">
+<div class="inp-group-search">
+	<label for="search1" class="blind">소속부서</label>
+	<input type="text" name="" id="search1" class="inp-text charLength10" placeholder="placeholder">
+	<button type="button" class="btn-search">검색</button>
+</div>
+	</div>
+	<div class="row">
+<div class="inp-group-search full">
+	<label for="search2" class="blind">소속부서</label>
+	<input type="text" name="" id="search2" class="inp-text" placeholder="placeholder">
+	<button type="button" class="btn-search">검색</button>
+</div>
+	</div>
+	<div class="row">
+<div class="inp-group-search">
+	<label for="search3">소속부서</label>
+	<input type="text" name="" id="search3" class="inp-text charLength10">
+	<button type="button" class="btn-search">검색</button>
+</div>
+	</div>
+	<div class="row">
+<div class="inp-group-search full">
+	<label for="search4">소속부서</label>
+	<input type="text" name="" id="search4" class="inp-text">
+	<button type="button" class="btn-search">검색</button>
+</div>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;inp-group-search&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;search1&#x22; class=&#x22;blind&#x22;&#x3E;&#xC18C;&#xC18D;&#xBD80;&#xC11C;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;search1&#x22; class=&#x22;inp-text charLength10&#x22; placeholder=&#x22;placeholder&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-search&#x22;&#x3E;&#xAC80;&#xC0C9;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-search full&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;search2&#x22; class=&#x22;blind&#x22;&#x3E;&#xC18C;&#xC18D;&#xBD80;&#xC11C;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;search2&#x22; class=&#x22;inp-text&#x22; placeholder=&#x22;placeholder&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-search&#x22;&#x3E;&#xAC80;&#xC0C9;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-search&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;search3&#x22;&#x3E;&#xC18C;&#xC18D;&#xBD80;&#xC11C;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;search3&#x22; class=&#x22;inp-text charLength10&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-search&#x22;&#x3E;&#xAC80;&#xC0C9;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-search full&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;search4&#x22;&#x3E;&#xC18C;&#xC18D;&#xBD80;&#xC11C;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;search4&#x22; class=&#x22;inp-text&#x22;&#x3E;
+&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn-search&#x22;&#x3E;&#xAC80;&#xC0C9;&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+
+<div class="code-preview">
+	<div class="row">
+		<div class="form-label">주소</div>
+<div class="inp-group-address">
+	<div class="form-controls inp-group-row">
+		<label for="zipcode" class="blind">우편번호</label>
+		<input type="text" name="" id="zipcode" class="inp-text inp-zipcode">
+		<button type="button" class="btn outlined">확인</button>
+	</div>
+	<div class="inp-group-row"><input type="text" name="" class="inp-text inp-addr1" placeholder="기본 주소" title="기본주소"></div>
+	<div class="inp-group-row"><input type="text" name="" class="inp-text inp-addr2" placeholder="상세 주소" title="상세주소"></div>
+</div>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;inp-group-address&#x22;&#x3E;
+&#x9;&#x3C;div class=&#x22;form-controls inp-group-row&#x22;&#x3E;
+&#x9;&#x9;&#x3C;label for=&#x22;zipcode&#x22; class=&#x22;blind&#x22;&#x3E;&#xC6B0;&#xD3B8;&#xBC88;&#xD638;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;zipcode&#x22; class=&#x22;inp-text inp-zipcode&#x22;&#x3E;
+&#x9;&#x9;&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;inp-group-row&#x22;&#x3E;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text inp-addr1&#x22; placeholder=&#x22;&#xAE30;&#xBCF8; &#xC8FC;&#xC18C;&#x22; title=&#x22;&#xAE30;&#xBCF8;&#xC8FC;&#xC18C;&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;inp-group-row&#x22;&#x3E;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text inp-addr2&#x22; placeholder=&#x22;&#xC0C1;&#xC138; &#xC8FC;&#xC18C;&#x22; title=&#x22;&#xC0C1;&#xC138;&#xC8FC;&#xC18C;&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+<div class="code-preview">
+	<div class="row">
+		<div class="form-label">일반 전화번호</div>
+		<div class="inp-group-tel">
+			<select class="select" title="전화번호 지역변호">
+				<option>선택</option>
+				<option>02</option>
+			</select>
+			<span class="inp-split">-</span>
+			<input type="text" name="" class="inp-text" title="전화번호 국 번호">
+			<span class="inp-split">-</span>
+			<input type="text" name="" class="inp-text" title="전화번호 가입자 번호">
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-label">휴대전화번호</div>
+		<div class="inp-group-tel">
+			<select class="select" title="휴대전화 식별번호">
+				<option>선택</option>
+				<option>010</option>
+			</select>
+			<span class="inp-split">-</span>
+			<input type="text" name="" class="inp-text" title="휴대전화 중간 번호">
+			<span class="inp-split">-</span>
+			<input type="text" name="" class="inp-text" title="휴대전화 뒷 번호">
+		</div>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;inp-group-tel&#x22;&#x3E;
+&#x9;&#x3C;select class=&#x22;select&#x22; title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xC9C0;&#xC5ED;&#xBCC0;&#xD638;&#x22;&#x3E;
+&#x9;&#x9;&#x3C;option&#x3E;&#xC120;&#xD0DD;&#x3C;/option&#x3E;
+&#x9;&#x9;&#x3C;option&#x3E;02&#x3C;/option&#x3E;
+&#x9;&#x3C;/select&#x3E;
+&#x9;&#x3C;span class=&#x22;inp-split&#x22;&#x3E;-&#x3C;/span&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text&#x22; title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xAD6D; &#xBC88;&#xD638;&#x22;&#x3E;
+&#x9;&#x3C;span class=&#x22;inp-split&#x22;&#x3E;-&#x3C;/span&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text&#x22; title=&#x22;&#xC804;&#xD654;&#xBC88;&#xD638; &#xAC00;&#xC785;&#xC790; &#xBC88;&#xD638;&#x22;&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-tel&#x22;&#x3E;
+&#x9;&#x3C;select class=&#x22;select&#x22; title=&#x22;&#xD734;&#xB300;&#xC804;&#xD654; &#xC2DD;&#xBCC4;&#xBC88;&#xD638;&#x22;&#x3E;
+&#x9;&#x9;&#x3C;option&#x3E;&#xC120;&#xD0DD;&#x3C;/option&#x3E;
+&#x9;&#x9;&#x3C;option&#x3E;010&#x3C;/option&#x3E;
+&#x9;&#x3C;/select&#x3E;
+&#x9;&#x3C;span class=&#x22;inp-split&#x22;&#x3E;-&#x3C;/span&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text&#x22; title=&#x22;&#xD734;&#xB300;&#xC804;&#xD654; &#xC911;&#xAC04; &#xBC88;&#xD638;&#x22;&#x3E;
+&#x9;&#x3C;span class=&#x22;inp-split&#x22;&#x3E;-&#x3C;/span&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text&#x22; title=&#x22;&#xD734;&#xB300;&#xC804;&#xD654; &#xB4B7; &#xBC88;&#xD638;&#x22;&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+<div class="code-preview">
+	<div class="row">
+		<div class="form-label">이메일</div>
+		<div class="inp-group-email">
+			<input type="text" name="" class="inp-text email-id" title="이메일 사용자 아이디">
+			<span class="inp-split">@</span>
+			<input type="text" name="" class="inp-text email-domain" title="이메일 도메인">
+			<select class="select email-domain-opt" title="이메일 도메인 선택">
+				<option>선택</option>
+				<option>naver.com</option>
+				<option>daum.net</option>
+				<option>gmail.com</option>
+			</select>
+		</div>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;inp-group-email&#x22;&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text email-id&#x22; title=&#x22;&#xC774;&#xBA54;&#xC77C; &#xC0AC;&#xC6A9;&#xC790; &#xC544;&#xC774;&#xB514;&#x22;&#x3E;
+&#x9;&#x3C;span class=&#x22;inp-split&#x22;&#x3E;@&#x3C;/span&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text email-domain&#x22; title=&#x22;&#xC774;&#xBA54;&#xC77C; &#xB3C4;&#xBA54;&#xC778;&#x22;&#x3E;
+&#x9;&#x3C;select class=&#x22;select email-domain-opt&#x22; title=&#x22;&#xC774;&#xBA54;&#xC77C; &#xB3C4;&#xBA54;&#xC778; &#xC120;&#xD0DD;&#x22;&#x3E;
+&#x9;&#x9;&#x3C;option&#x3E;&#xC120;&#xD0DD;&#x3C;/option&#x3E;
+&#x9;&#x9;&#x3C;option&#x3E;naver.com&#x3C;/option&#x3E;
+&#x9;&#x3C;/select&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+<div class="code-preview">
+	<div class="row">
+		<div class="form-label">텍스트와 함께</div>
+
+		<div class="row">
+<div class="inp-group-txt">
+	<input type="text" name="" id="txt1" class="inp-text charLength5" title="">
+	<span class="txt-unit">원</span>
+</div>
+		</div>	
+		<div class="row">
+<div class="inp-group-txt">
+	<label for="txt2">참가인원수</label>
+	<div class="inp-group-txt type-box">
+		<input type="text" name="" id="txt2" class="inp-text charLength3 align-right">
+		<span class="txt-unit">명</span>
+	</div>
+</div>
+		</div>
+		<div class="row">
+<div class="inp-group-txt full">
+	<input type="text" name="" class="inp-text" title="">
+	<span class="txt-unit">원</span>
+</div>
+		</div>
+		<div class="row">
+<div class="inp-group-txt box full">
+	<input type="text" name="" class="inp-text" title="">
+	<span class="txt-unit">명</span>
+</div>
+		</div>
+		<div class="row">
+<div class="inp-group-txt box full">
+	<label for="txt5">참가인원수</label>
+	<input type="text" name="" id="txt5" class="inp-text">
+	<span class="txt-unit">명</span>
+</div>
+		</div>		
+
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;inp-group-txt&#x22;&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;txt1&#x22; class=&#x22;inp-text charLength5&#x22; title=&#x22;&#x22;&#x3E;
+&#x9;&#x3C;span class=&#x22;txt-unit&#x22;&#x3E;&#xC6D0;&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-txt&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;txt2&#x22;&#x3E;&#xCC38;&#xAC00;&#xC778;&#xC6D0;&#xC218;&#x3C;/label&#x3E;
+&#x9;&#x3C;div class=&#x22;inp-group-txt type-box&#x22;&#x3E;
+&#x9;&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;txt2&#x22; class=&#x22;inp-text charLength3 align-right&#x22;&#x3E;
+&#x9;&#x9;&#x3C;span class=&#x22;txt-unit&#x22;&#x3E;&#xBA85;&#x3C;/span&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-txt full&#x22;&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; class=&#x22;inp-text&#x22; title=&#x22;&#x22;&#x3E;
+&#x9;&#x3C;span class=&#x22;txt-unit&#x22;&#x3E;&#xC6D0;&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;inp-group-txt box full&#x22;&#x3E;
+&#x9;&#x3C;label for=&#x22;txt5&#x22;&#x3E;&#xCC38;&#xAC00;&#xC778;&#xC6D0;&#xC218;&#x3C;/label&#x3E;
+&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;txt5&#x22; class=&#x22;inp-text&#x22;&#x3E;
+&#x9;&#x3C;span class=&#x22;txt-unit&#x22;&#x3E;&#xBA85;&#x3C;/span&#x3E;
+&#x3C;/div&#x3E;
+</code></pre>
+
+
+<h3 class="sec-title">그룹</h3>
+<div class="code-preview">
+	<div class="row">
+		<div class="form-label">혼합</div>
+
+<ul class="inp-group-items">
+	<li>
+		<div class="inp-group-txt">
+			<label for="mix1">이름</label>
+			<input type="text" name="" id="mix1" class="inp-text">
+		</div>
+	</li>
+	<li>
+		<div class="inp-group-txt">
+			<label for="mix2">생년월일</label>
+			<input type="text" name="" id="mix2" class="inp-text datepicker">
+		</div>
+	</li>
+	<li>
+		<div class="inp-group-check">
+			<label for="mix3-1">성별</label>
+			<div class="inp-check-list">
+				<label class="inp-radio">
+					<input type="radio" name="radio" id="mix3-1">
+					<span>남자</span>
+				</label>
+				<label class="inp-radio">
+					<input type="radio" name="radio" id="mix3-2">
+					<span>여자</span>
+				</label>
+			</div>
+		</div>
+	</li>
+</ul>
+
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;ul class=&#x22;inp-group-items&#x22;&#x3E;
+&#x9;&#x3C;li&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;inp-group-txt&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label for=&#x22;mix1&#x22;&#x3E;&#xC774;&#xB984;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;mix1&#x22; class=&#x22;inp-text&#x22;&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;inp-group-txt&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label for=&#x22;mix2&#x22;&#x3E;&#xC0DD;&#xB144;&#xC6D4;&#xC77C;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;input type=&#x22;text&#x22; name=&#x22;&#x22; id=&#x22;mix2&#x22; class=&#x22;inp-text datepicker&#x22;&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;
+&#x9;&#x9;&#x3C;div class=&#x22;inp-group-check&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;label for=&#x22;mix3-1&#x22;&#x3E;&#xC131;&#xBCC4;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;div class=&#x22;inp-check-list&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22; id=&#x22;mix3-1&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xB0A8;&#xC790;&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;label class=&#x22;inp-radio&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22; id=&#x22;mix3-2&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;span&#x3E;&#xC5EC;&#xC790;&#x3C;/span&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;/label&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+</code></pre>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

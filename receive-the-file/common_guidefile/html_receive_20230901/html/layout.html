@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>국민연금수급자</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+</head>
+<body>
+
+    <ul class="skip-nav">
+        <li><a href="#contents">본문 바로가기</a></li>
+        <li><a href="#gnav">주메뉴 바로가기</a></li>
+        <li><a href="#sideNav">서브메뉴 바로가기</a></li>
+        <li><a href="#footer">푸터 바로가기</a></li>
+    </ul>
+
+    <div id="wrap">
+        <header id="header">
+            <div class="header-top">
+                <h1><a href="#"><img src="../images/common/top_logo.png" alt="국민연금 수급자 서비스"></a></h1>
+                <div class="top-search">	    	
+                    <fieldset>
+                        <legend>통합검색</legend>
+                        <input type="text" class="txt-keyword" id="searchTop" name="query" title="검색어 입력" placeholder="검색어를 입력하세요">
+                        <input type="button" value="검색" class="btn-search">
+                    </fieldset>
+                </div>
+                <div class="top-links">
+                    <a href="#" class="go-nps" target="_blank" title="새창열림">국민연금공단</a>
+                </div>
+                <div class="zoom-control">
+                    <button type="button" class="zoomin" onclick="zoomInOut('#wrap', 'in')">글자크기 확대</button> 
+                    <button type="button" class="zoomout" onclick="zoomInOut('#wrap', 'out')">글자크기 축소</button>
+                </div>
+                <!-- 모바일용 메뉴 -->
+                <button class="btn-menu-mobile"><span>메뉴</span></button>
+            </div>
+            <div class="header-nav">
+                <div class="gnav-inner">
+                    <nav id="gnav">
+                        <ul class="gnav-dep1">
+                            <li><a href="#">내연금 조회</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">조회 및 발급</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">연금정보</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">알기쉬운 국민연금</a>
+                                        <ul class="gnav-dep3">
+                                            <li><a href="#">연금급여 정보 조회</a></li>
+                                            <li><a href="#">노령연금 정보 조회</a></li>
+                                            <li><a href="#">장애연금 정보 조회</a></li>
+                                            <li><a href="#">유족연금 정보 조회</a></li>
+                                            <li><a href="#">사망일시금 정보 조회</a></li>
+                                            <li><a href="#">외국인에 대한 급여 정보 조회</a></li>
+                                            <li><a href="#">권리구제(심사청구)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">연금 수급자가 알아야할 사항</a>
+                                        <ul class="gnav-dep3">
+                                            <li><a href="#" title="">변동사항 신고</a></li>
+                                            <li><a href="#" title="">부정수급 신고</a></li>
+                                            <li><a href="#" title="">연금 수급자가 알아야할 사항 조회</a></li>
+                                            <li><a href="#" title="">국민연금 100문 100답</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#" title="">수급자 통계</a>
+                                        <ul class="gnav-dep3">
+                                            <li><a href="#" title="">전국연금지급 통계</a></li>
+                                            <li><a href="#" title="">수급자 기네스</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">수급자서비스</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">실버론</a>
+                                        <ul class="gnav-dep3">
+                                            <li><a href="#">지원내용 조회</a></li>
+                                            <li><a href="#">신청방법 조회</a></li>
+                                            <li><a href="#">대부금 지급/상환 정보 조회</a></li>
+                                            <li><a href="#">모의계산 이자 계산 조회</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">국민연금증 카드</a></li>
+                                    <li><a href="#">피싱스탑</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">연금소식</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">수급자 행사</a></li>
+                                    <li><a href="#">지사안내</a></li>
+                                    <li><a href="#">일정표</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="btn-menu-all">전체메뉴 <span class="blind">열기</span></a>
+                </div>
+            </div>                
+            <div class="mobile-nav">
+                <nav id="gnav-m">
+                    <ul class="gnav-dep1">
+                        <li><a href="#">내연금 조회</a>
+                            <ul class="gnav-dep2">
+                                <li><a href="#">조회 및 발급</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="#">연금정보</a>
+                            <ul class="gnav-dep2">
+                                <li class="active"><a href="#">알기쉬운 국민연금</a>
+                                    <ul class="gnav-dep3">
+                                        <li class="active"><a href="#">연금급여 정보 조회</a></li>
+                                        <li><a href="#">노령연금 정보 조회</a></li>
+                                        <li><a href="#">장애연금 정보 조회</a></li>
+                                        <li><a href="#">유족연금 정보 조회</a></li>
+                                        <li><a href="#">사망일시금 정보 조회</a></li>
+                                        <li><a href="#">외국인에 대한 급여 정보 조회</a></li>
+                                        <li><a href="#">권리구제(심사청구)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">연금 수급자가 알아야할 사항</a>
+                                    <ul class="gnav-dep3">
+                                        <li><a href="#" title="">변동사항 신고</a></li>
+                                        <li><a href="#" title="">부정수급 신고</a></li>
+                                        <li><a href="#" title="">연금 수급자가 알아야할 사항 조회</a></li>
+                                        <li><a href="#" title="">국민연금 100문 100답</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" title="">수급자 통계</a>
+                                    <ul class="gnav-dep3">
+                                        <li><a href="#" title="">전국연금지급 통계</a></li>
+                                        <li><a href="#" title="">수급자 기네스</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">수급자서비스</a>
+                            <ul class="gnav-dep2">
+                                <li><a href="#">실버론</a>
+                                    <ul class="gnav-dep3">
+                                        <li><a href="#">지원내용 조회</a></li>
+                                        <li><a href="#">신청방법 조회</a></li>
+                                        <li><a href="#">대부금 지급/상환 정보 조회</a></li>
+                                        <li><a href="#">모의계산 이자 계산 조회</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">국민연금증 카드</a></li>
+                                <li><a href="#">피싱스탑</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">연금소식</a>
+                            <ul class="gnav-dep2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">수급자 행사</a></li>
+                                <li><a href="#">지사안내</a></li>
+                                <li><a href="#">일정표</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="conatiner">
+            <div class="conatiner-inner">
+                <aside class="side-wrap" id="sideNav">
+                    <div class="side-header"><h2>연금정보</h2></div>
+                    <nav class="side-nav">
+                        <ul class="snav-dep1">
+                            <li class="active"><a href="#">알기쉬운 국민연금</a>
+                                <ul class="snav-dep2">
+                                    <li class="active"><a href="#">연금급여 정보 조회</a></li>
+                                    <li><a href="#">노령연금 정보 조회</a></li>
+                                    <li><a href="#">장애연금 정보 조회</a></li>
+                                    <li><a href="#">유족연금 정보 조회</a></li>
+                                    <li><a href="#">사망일시금 정보 조회</a></li>
+                                    <li><a href="#">외국인에 대한 급여 정보 조회</a></li>
+                                    <li><a href="#">권리구제(심사청구)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">연금 수급자가 알아야할 사항</a>
+                                <ul class="snav-dep2">
+                                    <li><a href="#">변동사항 신고</a></li>
+                                    <li><a href="#">부정수급 신고</a></li>
+                                    <li><a href="#">연금수급자가 알아야할 사항 조회</a></li>
+                                    <li><a href="#">국민연금 100문 100답</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">수급자 통계</a>
+                                <ul class="snav-dep2">
+                                    <li><a href="#">전국연금지급 통계</a></li>
+                                    <li><a href="#">수급자 기네스</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" target="_blank">수급자 통계</a>
+                                <ul class="snav-dep2">
+                                    <li><a href="#">전국연금지급 통계</a></li>
+                                    <li><a href="#">수급자 기네스</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <section class="content-wrap" id="contents">
+                    <div class="sub-header">
+                        <h3 class="sub-title">연금급여 정보 조회</h3>
+                        <div class="sub-route">
+                            <ul>
+                                <li class="home"><span>home</span></li>
+                                <li>연금정보</li>
+                                <li>알기쉬운 국민연금</li>
+                                <li>연금급여 정보 조회</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-contents">
+                        <!-- 서브내용 시작 -->
+
+
+
+                        
+                        <!-- 서브내용 끝 -->
+                    </div>                    
+                    <!-- 만족도조사 -->
+                    <div class="page-satisfaction">                            
+                        <div class="satisfaction-header">
+                            <p class="slogan">국민을 든든하게 연금을 튼튼하게</p>
+                            <div class="person-info"><span class="label">담당:</span> 연금급여실 연금기획부 홍길동(063-713-0000)</div>
+                        </div>
+                        <div class="satisfaction-survey">    
+                            <fieldset>
+                            <legend>현재페이지 만족도 조사</legend>                        
+                            <div class="survey-form">                                
+                                <div class="survey-item">                                    
+                                    <p class="qustion">현재 페이지의 내용과 사용 편의성에 대해 만족하십니까?</p>
+                                    <ul class="options">
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>매우만족</span></label></li>
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>만족</span></label></li>
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>보통</span></label></li>
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>불만족</span></label></li>
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>매우불만족</span></label></li>
+                                    </ul>                                    
+                                </div>
+                                <input type="button" value="확인" class="btn btn-submit">                               
+                            </div>      
+                            </fieldset>                      
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-links">
+                    <ul class="inner-links">
+                        <li><a href="#" class="privacy">개인정보처리방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">홈페이지 이용안내</a></li>
+                        <li><a href="#">RSS</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
+                    </ul>
+                    <div class="outer-links">
+                        <details class="select related-links">
+                            <summary type="button" class="selected">직원/위원회</summary>
+                            <ul>
+                                <li><a href="#">직원/위원회</a></li>
+                                <li><a href="#">비상임이사</a></li>
+                                <li><a href="#">심사위원회</a></li>
+                                <li><a href="#">직원용 이메일</a></li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <address>54870 전라북도 전주시 덕진구 기지로 180(만성동, 국민연금)</address>
+                    <p class="footer-notice">매월 마지막 토요일 00:00 ~ 04:00까지는 정기적인 서비스 점검으로 서비스 이용이 일시 중단됩니다. <br>
+                        본 홈페이지에 게시된 이메일 주소가 자동수집되는 것을 허용하지 않으며, 위반시 정보통신망법에 의해 처벌될 수 있습니다.</p>
+                    <p class="footer-copyright">Copyright. nps.or.kr. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

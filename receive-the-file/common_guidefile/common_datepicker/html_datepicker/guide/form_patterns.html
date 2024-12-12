@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+
+	<!--달력-->
+	<script src="../js/lib/jquery.ui.monthpicker.js"></script>
+
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>폼 패턴</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">datepicker</h3>
+
+<div class="code-preview">
+	<div class="row">
+		<input type="text" name="" class="useDatepicker" value="2023-09-01">
+		<input type="text" name="" class="useDatepicker" value="disabled" disabled>
+	</div>
+	<div class="row">
+		<h4 class="form-label">기간 선택 (시작/종료날짜체크 - useDatepicker가 같은 레벨인 경우)</h4>
+
+		<div class="inp-group-period">
+			<input type="text" name="" class="useDatepicker dateFrom" title="시작일">
+			<span>~</span>
+			<input type="text" name="" class="useDatepicker dateTo" title="종료일">
+		</div>
+
+	</div>
+	<div class="row">
+		<h4 class="form-label">기간 선택 (시작/종료날짜체크 - useDatepicker가 같은 레벨로 위치하지 않은 경우)</h4>
+
+		<div class="inp-group-period">
+			<div class="inp-group">
+				<input type="text" name="" class="useDatepicker dateFrom" readonly id="startDate" data-to="#endDate" title="시작일">
+				<select>
+					<option>00</option>
+				</select>
+				<span>시</span>
+				<select>
+					<option>00</option>
+				</select>
+				<span>분</span>
+			</div>
+			<div>~</div>
+			<div class="inp-group">
+				<input type="text" name="" class="useDatepicker dateTo" readonly id="endDate" data-from="#startDate" title="종료일">
+				<select>
+					<option>00</option>
+				</select>
+				<span>시</span>
+				<select>
+					<option>00</option>
+				</select>
+				<span>분</span>
+			</div>
+		</div>
+
+	</div>
+	<div class="row">
+		<h4 class="form-label">연월 선택</h4>
+
+		<div class="inp-group-period">
+			<input type="text" name="" class="useMonthpicker dateFrom" title="시작 연월">
+			<span class="inp-split">~</span>
+			<input type="text" name="" class="useMonthpicker dateTo" title="종료 연월">
+		</div>
+
+	</div>
+</div>
+
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

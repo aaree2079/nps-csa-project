@@ -1,0 +1,45 @@
+@import url("../css/reset.css");
+@import url("../css/common.css");
+@import url("../css/contents.css");
+
+.guideWrap{display:flex; height:100vh;}
+.guideHeader{width:200px; background-color:#222; color:#000; position:fixed;left:0;top:0;bottom:0;}
+.guideHeader h1{font-size:20px; height:60px; display:flex; padding:0 20px; align-items: center; justify-content: center; box-sizing:border-box; border-bottom:1px solid rgba(255,255,255,0.1); color:#fff; box-sizing:border-box;}
+.guideNav > li > a{display:block; padding:10px 30px 10px 20px; text-align:left; position:relative; color:#fff; font-size:16px;}
+.guideNav > li > a:after{display:block;content:'';width:5px;height:5px; border:2px solid #555; border-width:2px 2px 0 0; transform: rotate(45deg); position:absolute;right:20px;top:50%; margin-top:-3px;}
+.guideNav > li{border-bottom:1px solid rgba(255,255,255,0.05);}
+.guideNav .active > a{background-color:#fff; color:#000;}
+.guideNav .nav-dep2{padding:0 30px 10px 30px; color:#888; font-size:14px;}
+.guideNav .nav-dep2 a{color:#fff;}
+
+.guideContainer{flex:1; margin-left:200px; width:calc(100% - 200px);}
+
+.sec-header{height:60px; padding:0 40px; box-sizing:border-box; display:flex; align-items: center; border-bottom:1px solid rgba(0,0,0,0.1);}
+.sec-header h2{font-size:20px;}
+
+.sec-contents{padding:40px; box-sizing:border-box;}
+
+pre{margin:0; padding:0;}
+code{font-size:13px; line-height:1.75em; font-family: Consolas, Monaco, monospace; tab-size: 2;}
+
+.code-preview{margin:20px 0; line-height:1.5em;}
+.code-preview .row:not(:first-child){margin-top:20px;}
+.code-preview .btn{vertical-align:bottom;}
+.code-preview .form-label{margin-bottom:10px; font-weight:600;}
+.code-preview:first-child{margin-top:0;}
+
+.sec-title{margin-bottom:20px; font-size:22px; font-weight:bold;}
+.sec-title:not(:first-child){margin-top:60px;}
+
+.guide-table{width:100%; font-family: Consolas, Monaco, 'Noto Sans KR', 'malgun gothic', monospace; font-size:14px;}
+.guide-table th,
+.guide-table td{border:1px solid #dedede; padding:10px; text-align:left;}
+.guide-table th{text-align:center; background-color:#f8f8f8;}
+
+
+@media all and (max-width:1024px){
+    .guideHeader{display:none;}
+    .guideContainer{width:100%; margin:0; }
+    .sec-header{padding-left:16px;}
+    .sec-contents{padding:40px 16px;}
+}

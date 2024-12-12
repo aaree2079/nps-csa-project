@@ -1,0 +1,69 @@
+/* form elements */
+input, textarea {
+    caret-color: var(--color-primary);
+}
+
+input[type=text],
+input[type=password],
+input[type=file]{height:32px; line-height:32px; border:1px solid var(--color-gray5); padding:0 10px; border-radius:6px;}
+
+textarea{border:1px solid var(--color-gray5); padding:10px; border-radius:6px;}
+
+select{border:1px solid var(--color-gray5); height:32px ; background:#fff url(../images/common/select_arr.svg) right 5px center / 18px auto no-repeat; padding:0 30px 0 10px; border-radius:6px;}
+
+
+/* form patterns */
+.inp-group-period{display:inline-flex; align-items:center; vertical-align:middle;}
+.inp-group-period > * + *{margin-left:3px;}
+
+
+/* datepicker */
+.useDatepicker{width:130px; padding-right:32px; position:relative; background:url(../images/common/ic_calendar.png) right 0 top 0 no-repeat; cursor:pointer;}
+.useDatepicker:focus{background-position:right 0 top -30px;}
+.useDatepicker:disabled{background-position:right 0 top -60px;}
+.useDatepicker[readonly]{background-color:#fff !important;}
+
+.ui-datepicker{position:relative; padding:5px; background-color:#fff; border:1px solid var(--color-line-input); z-index:90 !important; border-radius:2px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.ui-datepicker table{width:100%; font-size:12px;}
+.ui-datepicker th{height:30px; color:#555; text-align:center; padding:0;}
+.ui-datepicker td{width:14.2857%; text-align:center; height:30px;}
+.ui-datepicker td a{display:block; height:100%; text-align:center; border-radius:3px; line-height:30px; color:#555; cursor:pointer;}
+.ui-datepicker td a:not(.ui-state-highlight):not(.ui-state-active):hover{background-color:#f4f4f4;}
+.ui-datepicker .ui-state-active{color:#fff;background:#4b4b4b;}
+.ui-datepicker .ui-state-highlight{color:#555; background-color:#dfdfdf;}
+.ui-datepicker .ui-state-active{color:#fff !important; background-color:var(--color-primary);}
+.ui-datepicker .ui-datepicker-header{position:relative;padding:0;}
+.ui-datepicker .ui-datepicker-title{font-size:14px;font-weight:normal; text-align:center; padding:5px 0;}
+.ui-datepicker .ui-datepicker-title select{height:30px; padding-right:20px;}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year{width:80px;}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-month{width:60px;}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next{position:absolute;top:5px; width:30px;height:30px; box-sizing:border-box; border-radius:3px; text-indent:-9999em;cursor:pointer;}
+.ui-datepicker .ui-datepicker-prev:before,
+.ui-datepicker .ui-datepicker-next:before{display:block;content:'';width:24px;height:24px; position:absolute;left:50%;top:50%; margin:-12px 0 0 -12px;}
+.ui-datepicker .ui-datepicker-prev{left:0;}
+.ui-datepicker .ui-datepicker-next{right:0;}
+.ui-datepicker .ui-datepicker-prev:before{background:url(../images/common/ic_arr_prev.png) no-repeat 0 0;}
+.ui-datepicker .ui-datepicker-next:before{background:url(../images/common/ic_arr_next.png) no-repeat 0 0;}
+.ui-datepicker .ui-datepicker-prev:hover,
+.ui-datepicker .ui-datepicker-next:hover{background-color:#f4f4f4;}
+.ui-datepicker-month{margin-left:5px !important;}
+
+#ui-datepicker-div{display:none; width:230px; }
+#ui-datepicker-div table tbody td.date-holiday a{color:#eb3c3c;}
+#ui-datepicker-div td:first-child *{color:#eb3c3c;}
+#ui-datepicker-div td:last-child *{color:#4084d2;}
+
+.useMonthpicker{width:100px; padding-right:32px; position:relative; background:url(../images/common/ic_calendar.png) right 0 top 0 no-repeat; cursor:pointer;}
+.useMonthpicker:focus{background-position:right 0 top -30px;}
+.useMonthpicker:disabled{background-position:right 0 top -60px;}
+.useMonthpicker[readonly]{background-color:#fff !important;}
+
+#ui-monthpicker-div{width:160px; display:none;}
+#ui-monthpicker-div .ui-datepicker-header{margin-bottom:8px;}
+#ui-monthpicker-div .ui-datepicker-title .ui-datepicker-year{min-width:75px;padding:0 0 0 10px;}
+#ui-monthpicker-div .ui-datepicker-title .ui-datepicker-month{width:60px;}
+
+/* 말풍선 */
+.vaildToastPop{background-color:#323851; color:#fff; padding:10px 15px; border-radius:3px; font-size:15px; position:absolute; z-index:100;}
+.vaildToastPop:before{background-color:#323851; display:block;content:'';width:12px;height:12px; transform:rotate(45deg); position:absolute;left:25px;top:-6px;}

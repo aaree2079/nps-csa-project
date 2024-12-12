@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>테이블</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<div class="code-preview">
+
+	<div class="data-regist">
+		<p class="required-guide"><span class="required-mark">*</span>표시는 필수입력항목입니다.</p>
+		<table>
+			<caption>공지사항 게시물 상세 내용</caption>
+			<colgroup>
+				<col class="w15 min-w120px"><col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row"><label for="제목">제목<span class="required-mark">*</span></label></th>
+					<td><input type="text" name="제목" id="제목" class="w100"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="작성자">작성자<span class="required-mark">*</span></label></th>
+					<td><input type="text" name="작성자" id="작성자" class="w30 m-w100"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="비밀번호">비밀번호<span class="required-mark">*</span></label></th>
+					<td><input type="password" name="비밀번호" id="비밀번호" class="w30 m-w100">
+						<p class="inp-guide after">비밀번호는 영문,숫자,특수기호 10자 이상</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="첨부파일">첨부파일</label></th>
+					<td>
+						<input type="file" name="첨부파일" id="첨부파일" class="w100">
+						<div class="saved-file"><span class="file-name">saved.pdf</span> <button type="button" class="btn-delete">첨부된 파일 삭제</button></div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="내용">내용<span class="required-mark">*</span></label></th>
+					<td class="regist-contents">
+						<textarea name="내용" id="내용"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>	
+
+	<div class="btns-wrap">
+		<input type="submit" value="등록" class="btn outlined primary pill large">
+		<a href="#" class="btn outlined pill large">취소</a>
+	</div>
+
+</div>	
+
+			<!-- 내용끝 -->
+		</div>	
+	</section>
+</div>
+
+</body>
+</html>

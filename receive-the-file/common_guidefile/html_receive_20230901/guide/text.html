@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+	
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>텍스트</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">텍스트 색상</h3>
+<div class="code-preview">
+	<p class="txt-primary">글자색상입니다. primary</p>
+	<p class="txt-secondary">글자색상입니다. secondary</p>
+	<br>
+	<p class="txt-red">글자색상입니다. red</p>
+</div>
+<pre><code class="language-xml">&#x3C;p class=&#x22;txt-primary&#x22;&#x3E;&#xAE00;&#xC790;&#xC0C9;&#xC0C1;&#xC785;&#xB2C8;&#xB2E4;. primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-secondary&#x22;&#x3E;&#xAE00;&#xC790;&#xC0C9;&#xC0C1;&#xC785;&#xB2C8;&#xB2E4;. secondary&#x3C;/p&#x3E;
+&#x3C;br&#x3E;
+&#x3C;p class=&#x22;txt-red&#x22;&#x3E;&#xAE00;&#xC790;&#xC0C9;&#xC0C1;&#xC785;&#xB2C8;&#xB2E4;. red&#x3C;/p&#x3E;
+</code></pre>
+
+<h3 class="sec-title">텍스트 크기(pc, mobile 공통으로 사이즈를 설정할 경우 : 고정사이즈)</h3>
+<div class="code-preview">
+	<p class="txt-xsmall">글자크기 12px</p>
+	<p class="txt-small">글자크기 13px</p>
+	<p>글자크기 14px - 기본사이즈</p>
+	<p class="txt-middle">글자크기 16px</p>
+	<p class="txt-large">글자크기 18px</p>
+	<p class="txt-xlarge">글자크기 20px</p>
+	<p class="txt-2xlarge">글자크기 22px</p>
+	<p class="txt-3xlarge">글자크기 28px</p>
+</div>
+<pre><code class="language-xml">&#x3C;p class=&#x22;txt-xsmall&#x22;&#x3E;&#xAE00;&#xC790;&#xD06C;&#xAE30; 12px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-small&#x22;&#x3E;&#xAE00;&#xC790;&#xD06C;&#xAE30; 13px&#x3C;/p&#x3E;
+&#x3C;p&#x3E;&#xAE00;&#xC790;&#xD06C;&#xAE30; 14px - &#xAE30;&#xBCF8;&#xC0AC;&#xC774;&#xC988;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-middle&#x22;&#x3E;&#xAE00;&#xC790;&#xD06C;&#xAE30; 16px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-large&#x22;&#x3E;&#xAE00;&#xC790;&#xD06C;&#xAE30; 18px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-xlarge&#x22;&#x3E;&#xAE00;&#xC790;&#xD06C;&#xAE30; 20px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-2xlarge&#x22;&#x3E;&#xAE00;&#xC790;&#xD06C;&#xAE30; 22px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-3xlarge&#x22;&#x3E;&#xAE00;&#xC790;&#xD06C;&#xAE30; 28px&#x3C;/p&#x3E;
+</code></pre>
+
+<h3 class="sec-title">텍스트 굵기</h3>
+<div class="code-preview">
+	<!-- <p class="txt-thin">글자굵기 300</p> -->
+	<p class="txt-normal">글자굵기 400 - regular</p>
+	<p class="txt-medium">글자굵기 500 - medium</p>
+	<p class="txt-bold">글자굵기 600 - bold</p>
+	<!-- <p class="txt-havy">글자굵기 700</p> -->
+</div>
+<pre><code class="language-xml">&#x3C;p class=&#x22;txt-normal&#x22;&#x3E;&#xAE00;&#xC790;&#xAD75;&#xAE30; 400&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-medium&#x22;&#x3E;&#xAE00;&#xC790;&#xAD75;&#xAE30; 500&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-bold&#x22;&#x3E;&#xAE00;&#xC790;&#xAD75;&#xAE30; 600&#x3C;/p&#x3E;
+</code></pre>
+
+<h3 class="sec-title">텍스트 스타일</h3>
+<div class="code-preview">
+	<p class="txt-underline">밑줄</p>
+</div>
+<pre><code class="language-xml">&#x3C;p class=&#x22;txt-underline&#x22;&#x3E;&#xBC11;&#xC904;&#x3C;/p&#x3E;
+</code></pre>
+
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

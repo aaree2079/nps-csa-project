@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>국민연금공단 연금수급자</title>
+<link rel="stylesheet" type="text/css" href="pageList.css">
+<script src="js/lib/jquery-3.7.0.slim.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(".page-nav a").on("click",function(){
+		var target = $(this).attr("href");
+
+		if($(this).hasClass("total")){
+			$(".sec-wrap").removeClass("hide");
+		}else{
+			$(".sec-wrap").addClass("hide");
+			$(target).removeClass("hide");
+		}
+	});
+
+	$(".list-table table").each(function(){
+		var len = $(this).find("tbody").children("tr").length;
+		for( i=0; i< len ; i++){
+			$(this).find("tbody").children().eq(i).children().first().text(i+1);
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div id="pageWrap">
+	<div class="page-header">
+		<div class="header-top">
+			<div class="pj-title">
+				<span class="lb">Project</span>
+				<span class="name">국민연금 연금수급자</span>
+			</div>
+		</div>
+		<div class="page-nav">
+			<nav>
+				<ul class="dep1">
+					<li><a href="#" class="total">전체</a></li>
+					<li><a href="#sec0">메인</a></li>
+					<li><a href="#sec1">내연금 조회</a></li>
+					<li><a href="#sec2">연금정보</a></li>
+					<li><a href="#sec3">수급자 서비스</a></li>
+					<li><a href="#sec4">연금소식</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="page-container">
+		<div class="page-title">
+			<h2>Page list</h2>
+		</div>
+		<div class="page-contents">
+			<!-- 내용시작 -->
+
+			<div class="sec-wrap" id="sec0">
+				<div class="sec-title">메인</div>
+				<div class="list-table">
+					<table>
+						<colgroup>
+							<col style="width:50px">
+							<col style="width:120px">
+							<col>
+							<col style="width:80px">
+							<col style="width:100px">
+							<col style="width:300px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>번호</th>
+								<th>화면ID</th>
+								<th>파일</th>
+								<th>반응형</th>
+								<th>접근성</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td></td>
+								<td><a href="html/main.html" target="_blank">메인</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td><a href="html/layout.html" target="_blank">서브 레이아웃</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td><a href="guide/standard.html" target="_blank">템플릿</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="sec-wrap" id="sec1">
+				<div class="sec-title">내연금 조회</div>
+				<div class="list-table">
+					<table>
+						<colgroup>
+							<col style="width:50px">
+							<col style="width:120px">
+							<col>
+							<col style="width:80px">
+							<col style="width:100px">
+							<col style="width:300px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>번호</th>
+								<th>화면ID</th>
+								<th>파일</th>
+								<th>반응형</th>
+								<th>접근성</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td></td>
+								<td><a href="html/1_1_내연금조회_조회및발급.html" target="_blank">조회및발급</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="sec-wrap" id="sec2">
+				<div class="sec-title">연금정보</div>
+				<div class="list-table">
+					<table>
+						<colgroup>
+							<col style="width:50px">
+							<col style="width:120px">
+							<col>
+							<col style="width:80px">
+							<col style="width:100px">
+							<col style="width:300px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>번호</th>
+								<th>화면ID</th>
+								<th>파일</th>
+								<th>반응형</th>
+								<th>접근성</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td></td>
+								<td><a href="html/2_1_1_연금급여정보조회.html" target="_blank">알기쉬운국민연금 > 연금급여 정보 조회</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td><a href="html/2_1_2_노령연금정보조회.html" target="_blank">알기쉬운국민연금 > 노령연금 정보 조회</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>알기쉬운국민연금 > 장애연금 정보 조회</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>수급자 통계 > 전국연금지급 통계</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>수급자 통계 > 수급자 기네스</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="sec-wrap" id="sec3">
+				<div class="sec-title">수급자 서비스</div>
+				<div class="list-table">
+					<table>
+						<colgroup>
+							<col style="width:50px">
+							<col style="width:120px">
+							<col>
+							<col style="width:80px">
+							<col style="width:100px">
+							<col style="width:300px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>번호</th>
+								<th>화면ID</th>
+								<th>파일</th>
+								<th>반응형</th>
+								<th>접근성</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td></td>
+								<td><a href="/3_1_1_지원내용조회.html" target="_blank">실버론 > 지원내용 조회</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>실버론 > 신청방법 조회</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>실버론 > 대부금 지급/상환 정보 조회</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>실버론 > 모의계산이자계산조회</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>국민연금증카드</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>피싱스탑</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="sec-wrap" id="sec4">
+				<div class="sec-title">연금소식</div>
+				<div class="list-table">
+					<table>
+						<colgroup>
+							<col style="width:50px">
+							<col style="width:120px">
+							<col>
+							<col style="width:80px">
+							<col style="width:100px">
+							<col style="width:300px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>번호</th>
+								<th>화면ID</th>
+								<th>파일</th>
+								<th>반응형</th>
+								<th>접근성</th>
+								<th>메모</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td></td>
+								<td><a href="/4_1_공지사항.html" target="_blank">공지사항</a></td>
+								<td></td>
+								<td></td>
+								<td>공통게시판</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>수급자행사</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>지사안내</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>일정표</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- 내용끝 -->
+		</div>
+	</div>
+</div><!-- //wrap -->
+
+</body>
+</html>

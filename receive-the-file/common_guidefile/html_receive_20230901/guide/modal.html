@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>FAQ</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<div class="code-preview">
+
+	<button class="btn contained primary pill" id="btn1">버튼1</button>
+	<button class="btn contained primary pill" id="btn2">버튼2-딤이 있는 경우</button>
+	
+	<div class="modal" id="test">
+		<div class="modalWrap">
+			<div class="modal-header">
+				<div class="modal-title">
+					<h3>모달제목</h3>
+				</div>
+				<button class="btn-close">모달창닫기</button>
+			</div>
+			<div class="modal-body">
+				<!-- 내용시작 -->
+				여기에 내용이 들어감<br>
+				<div class="con-table all-center">
+					<table>
+						<caption>출생연도별 노령연금과 조기노령연금의 지급개시연령</caption>
+						<colgroup>
+							<col class="w20"><col span="5">
+							<!-- <col><col><col><col><col> -->
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">출생연도</th>
+								<th scope="col">1953 ~ 56년생</th>
+								<th scope="col">1957 ~ 60년생</th>
+								<th scope="col">1961 ~ 64년생</th>
+								<th scope="col">1965 ~ 68년생</th>
+								<th scope="col">1969년생 ~</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">노령연금 <br>지급개시연령</th>
+								<td>61세</td>
+								<td>62세</td>
+								<td>63세</td>
+								<td>64세</td>
+								<td>65세</td>
+							</tr>
+							<tr>
+								<th scope="row">조기노령연금 <br>지급개시연령</th>
+								<td>55세</td>
+								<td>57세</td>
+								<td>58세</td>
+								<td>59세</td>
+								<td>60세</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 내용끝 -->
+			</div>
+		</div>
+	</div>
+	<style>
+		#test .modalWrap{width:600px;}
+	</style>
+
+	<div class="modal dim" id="test2">
+		<div class="modalWrap">
+			<div class="modal-header">
+				<div class="modal-title">
+					<h3>모달제목</h3>
+				</div>
+				<button class="btn-close">모달창닫기</button>
+			</div>
+			<div class="modal-body center">
+				<p class="alert-msg">정말로 삭제하시겠습니까?<br>(중앙정렬)</p>
+			</div>
+			<div class="modal-action">
+				<button type="button" class="btn outlined primary">확인</button>
+				<button type="button" class="btn outlined btn-close">닫기</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		//commonUI.modal('모달타겟', 포커스가 되돌아갈 요소 );
+		document.querySelector('#btn1').addEventListener('click', (e)=>{
+			//commonUI.modal('#test', e.target);
+			commonUI.modal('#test', '#btn1');
+		});
+		document.querySelector('#btn2').addEventListener('click', ()=>{
+			commonUI.modal('#test2', '#btn2');
+		});
+	</script>
+	
+</div>
+
+<a href="#"></a>
+
+			<!-- 내용끝 -->
+		</div>	
+	</section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+@charset "utf-8";
+:root {
+	font-size:62.5%;
+	--color-base: #444;	/*설정완료*/
+
+	--font-base: 'Noto Sans KR', 'malgun gothic', dotum, sans-serif;	/*설정완료*/
+	--font-use: 'Pretendard', sans-serif;	/*설정완료*/
+	--font-base-size: 1.6rem;	/*설정완료*/
+
+	--color-primary: #1D8FFF;	/*설정완료*/
+	--color-secondary: #0AB439;	/*설정완료*/
+	--color-point: #FC1F2D;	/*설정완료*/
+
+	--color-gray1: #111;	/* 설정완료 */
+	--color-gray2: #222;	/* 설정완료 */
+	--color-gray3: #333;
+	--color-gray4: #666;	/* 설정완료 */
+	--color-gray5: #999;	/* 설정완료 */
+	--color-gray6: #707884;
+
+	/* --color-err: #FC1F2D; */
+
+	--ui-colr1: #ccc;	/* 설정완료 */
+	--ui-colr2: #ddd;	/* 설정완료 */
+	--ui-colr3: #E5E5E5;	/* 설정완료 */
+	--ui-colr4: #F9FAFB;	/* 설정완료 */
+
+	/* --color-placeholder: #999;
+	--color-readonly-bg: #666; */
+
+	/* --opacity-disabled: 0.5; */
+
+	--width-max: 1280px;	/*설정완료*/
+	--width-min: 360px;	/*설정완료*/
+}
+
+/* Reset ********************************************************************** */
+
+html{scroll-behavior:smooth; min-width:var(--width-min);}
+html,body{width:100%; height:100%;}
+body{-webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; word-wrap:break-word; word-break:keep-all; -webkit-tap-highlight-color:rgba(255,255,255,0);}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,caption,textarea,p,blockquote,th,td,input,select,textarea,button,figure,figcaption {margin:0; padding:0}
+body, input, textarea, select, table, button{font-family:var(--font-base); font-size:var(--font-base-size); color:var(--color-base); font-weight:400; letter-spacing:-0.05em;}
+
+img{border:0;}
+*,*::before,*::after {box-sizing:border-box;}
+
+
+
+a{color:var(--color-base);}
+a, a:hover, a:active, a:visited{text-decoration:none;}
+a:hover, a:active{color:var(--color-primary);}
+
+ul, ol{list-style:none;}
+
+h1,h2,h3,h4,h5,h6{margin:0; padding:0; font-weight:500; line-height:1em;}
+
+em,i,address,small,cite,code {font-style:normal;}
+b{font-weight:500;}
+strong{font-weight:600;}
+abbr{text-decoration:none;}
+details{display:block;}
+sub,sup {font-size:75%; line-height:0; position:relative; vertical-align:baseline}
+sub {bottom:-0.25em;}
+sup {top:-0.5em;}
+
+iframe{margin:0; padding:0; border:0;}
+
+hr{display:none;}
+
+table{border-spacing:0; border-collapse:collapse; table-layout:fixed;}
+th{font-weight:500;}
+
+picture img{max-width:100%;}
+
+/* ie */
+article,aside,hgroup,header,footer,figure,figcaption,nav,section,main{display:block}
+
+/* form */
+form, fieldset, legend{border:0;}
+input, select, textarea{vertical-align:middle; box-sizing:border-box; border:0;}
+
+button{appearance:none; -webkit-appearance:none; border:none; /*background:none;*/ cursor:pointer;}
+
+input[type=text]::-ms-clear{display:none;}
+input[type=password]::-ms-reveal{display:none;}
+
+input[type="submit"],
+input[type="image"],
+input[type="button"]{appearance: none; -webkit-appearance:none; cursor:pointer; border:0; border-radius:0;}
+
+textarea::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {color:var(--color-gray5) !important; letter-spacing:0;}
+textarea:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder {color:var(--color-gray5) !important; letter-spacing:0;}
+input[type="text"]:-webkit-input-placeholder,
+input[type="password"]:-webkit-input-placeholder {color:var(--color-gray5); letter-spacing:0;}
+
+textarea{resize: none;}
+
+select{appearance: none; -webkit-appearance:none; cursor:pointer;}
+select::-ms-expand{display:none;}
+
+/* disabled 마우스 커서 */
+*[disabled], .disabled, .disabled > * {cursor:no-drop;}
+*[readonly], .readonly {cursor:default;}
+
+/* swiper */
+:root { --swiper-navigation-size: 44px;}
+.swiper-android .swiper-slide, .swiper-wrapper { transform: translate3d(0px,0,0);}
+.swiper-wrapper {position: relative; width: 100%; height: 100%; z-index: 1; display: flex; transition-property: transform; box-sizing: content-box;}
+.swiper-slide { flex-shrink: 0; width: 100%; height: 100%; position: relative; transition-property: transform;}
+.swiper-notification{display:none;}
+
+.swiper-container-fade .swiper-slide{pointer-events:none; transition-property:opacity;}
+.swiper-container-fade .swiper-slide-active,
+.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}
+
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-weight: 300;
+	src: url(./fonts/NotoSansKR-Light.eot);
+	src: url(./fonts/NotoSansKR-Light.eot?#iefix) format('embedded-opentype'),
+		 url(./fonts/NotoSansKR-Light.woff2) format("woff2"),
+		 url(./fonts/NotoSansKR-Light.woff) format('woff');
+}
+
+@font-face {
+font-family: 'Noto Sans KR';
+font-weight: 400;
+src: url(./fonts/NotoSansKR-Regular.eot);
+src: url(./fonts/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/NotoSansKR-Regular.woff2) format('woff2'),
+		url(./fonts/NotoSansKR-Regular.woff) format('woff');
+}
+
+@font-face {
+font-family: 'Noto Sans KR';
+font-weight: 500;
+src: url(./fonts/NotoSansKR-Medium.eot);
+src: url(./fonts/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/NotoSansKR-Medium.woff2) format('woff2'),
+		url(./fonts/NotoSansKR-Medium.woff) format('woff');
+}
+
+@font-face {
+font-family: 'Noto Sans KR';
+font-weight: 700;
+src: url(./fonts/NotoSansKR-Bold.eot);
+src: url(./fonts/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/NotoSansKR-Bold.woff2) format('woff2'),
+		url(./fonts/NotoSansKR-Bold.woff) format('woff');
+}
+
+@font-face {
+font-family: 'Noto Sans KR';
+font-weight: 900;
+src: url(./fonts/NotoSansKR-Black.eot);
+src: url(./fonts/NotoSansKR-Black.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/NotoSansKR-Black.woff2) format('woff2'),
+		url(./fonts/NotoSansKR-Black.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	src: url(./fonts/Pretendard-Regular.eot);
+	src: url(./fonts/Pretendard-Regular.eot?#iefix) format('embedded-opentype'),
+			url(./fonts/Pretendard-Regular.woff2) format('woff2'),
+			url(./fonts/Pretendard-Regular.woff) format('woff');
+	}
+
+	
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	src: url(./fonts/Pretendard-Medium.eot);
+	src: url(./fonts/Pretendard-Medium.eot?#iefix) format('embedded-opentype'),
+			url(./fonts/Pretendard-Medium.woff2) format('woff2'),
+			url(./fonts/Pretendard-Medium.woff) format('woff');
+	}
+
+	
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	src: url(./fonts/Pretendard-Bold.eot);
+	src: url(./fonts/Pretendard-Bold.eot?#iefix) format('embedded-opentype'),
+			url(./fonts/Pretendard-Bold.woff2) format('woff2'),
+			url(./fonts/Pretendard-Bold.woff) format('woff');
+	}
+
+	
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	src: url(./fonts/Pretendard-Black.eot);
+	src: url(./fonts/Pretendard-Black.eot?#iefix) format('embedded-opentype'),
+			url(./fonts/Pretendard-Black.woff2) format('woff2'),
+			url(./fonts/Pretendard-Black.woff) format('woff');
+	}
+	
+@media all and (max-width:767px){
+	:root {
+		--font-base-size: 1.4rem;
+	}
+}

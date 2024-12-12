@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>Bullets</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">순서없는 목록</h3>
+<div class="code-preview">
+	<ul class="txt-list dot">
+		<li>목록 텍스트 타입 dot</li>
+		<li>목록 텍스트</li>
+	</ul>
+	<br>
+	<ul class="txt-list dash">
+		<li>목록 텍스트 타입 dash</li>
+		<li>목록 텍스트</li>
+	</ul>
+</div>
+<pre><code class="language-xml">&#x3C;ul class=&#x22;txt-list dot&#x22;&#x3E;
+&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xD0C0;&#xC785; dot&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;txt-list dash&#x22;&#x3E;
+&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xD0C0;&#xC785; dash&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+</code></pre>
+
+<h3 class="sec-title">순서있는 목록</h3>
+<div class="code-preview">
+<ol class="txt-list num">
+	<li>숫자 목록
+		<ul class="txt-list num-bracket">
+			<li>목록 텍스트 번호
+				<ul class="txt-list num-circle">
+					<li>목록 텍스트 번호</li>
+					<li>목록 텍스트 번호</li>
+					<li>목록 텍스트 번호</li>
+				</ul>
+			</li>
+			<li>목록 텍스트 번호</li>
+			<li>목록 텍스트 번호</li>
+		</ul>
+	</li>
+	<li>숫자 목록</li>
+	<li>숫자 목록</li>
+</ol>
+<ul class="txt-list ganada">
+	<li>목록 텍스트 가나다</li>
+	<li>목록 텍스트 가나다</li>
+	<li>목록 텍스트 가나다</li>
+</ul>
+
+
+</div>
+<pre><code class="language-xml">&#x3C;ol class=&#x22;txt-list num&#x22;&#x3E;
+&#x9;&#x3C;li&#x3E;&#xC22B;&#xC790;
+&#x9;&#x9;&#x3C;ul class=&#x22;txt-list num-bracket&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xBC88;&#xD638;
+&#x9;&#x9;&#x9;&#x9;&#x3C;ul class=&#x22;txt-list num-circle&#x22;&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xBC88;&#xD638;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xBC88;&#xD638;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xBC88;&#xD638;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x9;&#x3C;/ul&#x3E;
+&#x9;&#x9;&#x9;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xBC88;&#xD638;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xBC88;&#xD638;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x3C;/ul&#x3E;
+&#x9;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;&#xC22B;&#xC790;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;&#xC22B;&#xC790;&#x3C;/li&#x3E;
+&#x3C;/ol&#x3E;
+&#x3C;ul class=&#x22;txt-list ganada&#x22;&#x3E;
+&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xAC00;&#xB098;&#xB2E4;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xAC00;&#xB098;&#xB2E4;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;&#xBAA9;&#xB85D; &#xD14D;&#xC2A4;&#xD2B8; &#xAC00;&#xB098;&#xB2E4;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+</code></pre>
+
+<h3 class="sec-title">단일 불릿</h3>
+<div class="code-preview">
+	<p class="txt-dot">도트 단일 문장입니다. 연금은 지급사유가 발생한 날이 속하는 달의 다음달부터 수급권이 소멸한 날이 속하는 달까지 지급합니다. 노령연금의 경우 지급사유발생일은 60세 생일이며(조기노령연금의 경우 청구일), 장애연금의 경우 완치일 또는 초진일로부터 1년 6개월 경과일, 유족연금의 경우 사망일입니다.</p>
+	<p class="txt-dash">대시 단일 문장입니다. 연금은 지급사유가 발생한 날이 속하는 달의 다음달부터 수급권이 소멸한 날이 속하는 달까지 지급합니다. 노령연금의 경우 지급사유발생일은 60세 생일이며(조기노령연금의 경우 청구일), 장애연금의 경우 완치일 또는 초진일로부터 1년 6개월 경과일, 유족연금의 경우 사망일입니다.</p>
+	<p class="txt-refer txt-small">참고표시 단일 문장입니다. 연금은 지급사유가 발생한 날이 속하는 달의 다음달부터 수급권이 소멸한 날이 속하는 달까지 지급합니다. 노령연금의 경우 지급사유발생일은 60세 생일이며(조기노령연금의 경우 청구일), 장애연금의 경우 완치일 또는 초진일로부터 1년 6개월 경과일, 유족연금의 경우 사망일입니다.</p>
+	<p class="txt-star txt-xsmall">별표시 단일 문장입니다. 연금은 지급사유가 발생한 날이 속하는 달의 다음달부터 수급권이 소멸한 날이 속하는 달까지 지급합니다. 노령연금의 경우 지급사유발생일은 60세 생일이며(조기노령연금의 경우 청구일), 장애연금의 경우 완치일 또는 초진일로부터 1년 6개월 경과일, 유족연금의 경우 사망일입니다.</p>
+</div>
+<pre><code class="language-xml">&#x3C;p class=&#x22;txt-dot&#x22;&#x3E;&#xB3C4;&#xD2B8; &#xB2E8;&#xC77C; &#xBB38;&#xC7A5;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-dash&#x22;&#x3E;&#xB300;&#xC2DC; &#xB2E8;&#xC77C; &#xBB38;&#xC7A5;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-refer txt-small&#x22;&#x3E;&#xCC38;&#xACE0;&#xD45C;&#xC2DC; &#xB2E8;&#xC77C; &#xBB38;&#xC7A5;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;txt-star txt-xsmall&#x22;&#x3E;&#xBCC4;&#xD45C;&#xC2DC; &#xB2E8;&#xC77C; &#xBB38;&#xC7A5;&#xC785;&#xB2C8;&#xB2E4;.&#x3C;/p&#x3E;
+</code></pre>
+
+<h3 class="sec-title">혼합</h3>
+<div class="code-preview">
+	<ul class="txt-list dot gap">
+		<li><b class="txt-list-title">목록 중간 제목</b>
+			<ul class="txt-list dash">
+				<li>목록 텍스트</li>
+				<li>목록 텍스트</li>
+			</ul>
+		</li>
+		<li><b class="txt-list-title">목록 중간 제목</b>
+			<ul class="txt-list num-circle">
+				<li>목록 텍스트
+					<ul class="txt-list dash">
+						<li>목록 텍스트
+							<p>일본, 영국, 미국, 덴마크 등과 같이 우리나라보다 앞서 사회보험제도를 시행하고 있는 다른 나라와 마찬가지로 우리나라에서도 한 사람에게 국민연금 또는 다른 사회보험에 의한 급여가 중복 지급되는 것을 제한하거나 조정하고 있습니다. 이는 한 사람에게 급여가 집중되는 것을 방지하여 한정된 재원으로 좀 더 많은 사람들이 골고루 혜택을 누려야 한다는 사회보험의 원리에 따른 것입니다.</p>
+						</li>
+						<li>목록 텍스트</li>
+					</ul>
+				</li>
+				<li>목록 텍스트
+					<ol class="txt-list">
+						<li>목록 텍스트
+							<p>일본, 영국, 미국, 덴마크 등과 같이 우리나라보다 앞서 사회보험제도를 시행하고 있는 다른 나라와 마찬가지로 우리나라에서도 한 사람에게 국민연금 또는 다른 사회보험에 의한 급여가 중복 지급되는 것을 제한하거나 조정하고 있습니다.</p>
+							<p>이는 한 사람에게 급여가 집중되는 것을 방지하여 한정된 재원으로 좀 더 많은 사람들이 골고루 혜택을 누려야 한다는 사회보험의 원리에 따른 것입니다.</p>
+						</li>
+						<li>목록 텍스트</li>
+						<li>목록 텍스트</li>
+					</ol>
+				</li>
+				<li>목록 텍스트
+					<p class="txt-dash">대시 단일 문장입니다.</p>
+				</li>
+				<li>목록 텍스트
+					<p class="txt-refer">참고 단일 문장입니다.</p>
+					<p class="txt-refer">참고 단일 문장입니다.</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

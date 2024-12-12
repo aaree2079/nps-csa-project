@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>이미지(반응형)</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">모바일용 이미지가 따로 있는 경우</h3>
+<div class="code-preview">
+
+	<picture>
+		<source srcset="../images/temp/picture_mobile.png" media="(max-width:768px)"><!-- 모바일용 이미지 -->
+		<img src="../images/temp/picture_pc.png" alt=""><!-- pc용 이미지(기본) -->
+	</picture>
+
+	<br><br>
+
+	<p>* 미디어쿼리 포인트는 각 이미지에 따라 알맞게 설정하기</p>
+
+</div>
+<pre><code class="language-xml">&#x3C;picture&#x3E;
+&#x9;&#x3C;source srcset=&#x22;../images/temp/picture_mobile.png&#x22; media=&#x22;(max-width:768px)&#x22;&#x3E;&#x3C;!-- &#xBAA8;&#xBC14;&#xC77C;&#xC6A9; &#xC774;&#xBBF8;&#xC9C0; --&#x3E;
+&#x9;&#x3C;img src=&#x22;../images/temp/picture_pc.png&#x22; alt=&#x22;&#x22;&#x3E;&#x3C;!-- pc&#xC6A9; &#xC774;&#xBBF8;&#xC9C0;(&#xAE30;&#xBCF8;) --&#x3E;
+&#x3C;/picture&#x3E;
+</code></pre>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

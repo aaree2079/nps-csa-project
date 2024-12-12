@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>탭</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">탭종류1</h3>
+<div class="code-preview">
+	
+<div class="tabWrap tab-base tab-feature">
+	<ul class="tabNav">
+		<li><a href="#" id="tabNav1" role="tab">지배구조</a></li>
+		<li><a href="#" id="tabNav2" role="tab">기금규모</a></li>
+		<li><a href="#" id="tabNav3" role="tab">기금수익률</a></li>
+		<li><a href="#" id="tabNav4" role="tab">자산배분</a></li>
+	</ul>
+	<div class="tabContent" role="tabpanel" aria-labelledby="tabNav1">
+		지배구조 내용
+	</div>
+	<div class="tabContent" role="tabpanel" aria-labelledby="tabNav2">
+		기금규모 내용
+	</div>
+	<div class="tabContent" role="tabpanel" aria-labelledby="tabNav3">
+		기금수익률 내용
+	</div>
+	<div class="tabContent" role="tabpanel" aria-labelledby="tabNav4">
+		자산배분 내용
+	</div>
+</div>
+<script>
+commonUI.tabNav('.tab-feature', 1);
+</script>
+
+	<br><br>
+	<table class="guide-table">
+		<col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th class="align-left">.tabWrap, <br>.tabNav, <br>.tabContent</th>
+				<td>스크립트 내부용<br>(변경하거나 없으면 기능작동 안함)</td>
+			</tr>
+			<tr>
+				<th class="align-left">.tab-base</th>
+				<td>기본 스타일 - 타입1 (스타일이 다를 경우 삭제 후 자유롭게 네이밍)</td>
+			</tr>
+			<tr>
+				<th class="align-left">.tab-base2</th>
+				<td>기본 스타일 - 타입2 (스타일이 다를 경우 삭제 후 자유롭게 네이밍)</td>
+			</tr>
+			<tr>
+				<th class="align-left">.tab-feature</th>
+				<td>실행/초기화로 사용할 선택자(자유롭게 네이밍). 하나의 문서에서 중복 X </td>
+			</tr>
+			<tr>
+				<th class="align-left">탭과 내용의 매칭(접근성)</th>
+				<td>a[id] == .tabContent[aria-labelledby]</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;tabWrap tab-base tab-feature&#x22;&#x3E;
+&#x9;&#x3C;ul class=&#x22;tabNav&#x22;&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav1&#x22; role=&#x22;tab&#x22;&#x3E;&#xC9C0;&#xBC30;&#xAD6C;&#xC870;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav2&#x22; role=&#x22;tab&#x22;&#x3E;&#xAE30;&#xAE08;&#xADDC;&#xBAA8;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav3&#x22; role=&#x22;tab&#x22;&#x3E;&#xAE30;&#xAE08;&#xC218;&#xC775;&#xB960;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav4&#x22; role=&#x22;tab&#x22;&#x3E;&#xC790;&#xC0B0;&#xBC30;&#xBD84;&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x3C;/ul&#x3E;
+&#x9;&#x3C;div class=&#x22;tabContent&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav1&#x22;&#x3E;
+&#x9;&#x9;&#xC9C0;&#xBC30;&#xAD6C;&#xC870; &#xB0B4;&#xC6A9;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;tabContent&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav2&#x22;&#x3E;
+&#x9;&#x9;&#xAE30;&#xAE08;&#xADDC;&#xBAA8; &#xB0B4;&#xC6A9;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;tabContent&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav3&#x22;&#x3E;
+&#x9;&#x9;&#xAE30;&#xAE08;&#xC218;&#xC775;&#xB960; &#xB0B4;&#xC6A9;
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;tabContent&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav4&#x22;&#x3E;
+&#x9;&#x9;&#xC790;&#xC0B0;&#xBC30;&#xBD84; &#xB0B4;&#xC6A9;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;script&#x3E;
+commonUI.tabNav(&#x27;.tab-feature&#x27;, 1);
+&#x3C;/script&#x3E;
+</code></pre>
+
+<h3 class="sec-title">탭종류2</h3>
+<div class="code-preview">
+
+	<div class="tabWrap tab-base2 tab-feature2">
+		<ul class="tabNav">
+			<li><a href="#" id="tabNav2-1" role="tab">tab1</a></li>
+			<li><a href="#" id="tabNav2-2" role="tab">tab2</a></li>
+		</ul>
+		<div class="tabContent" role="tabpanel" aria-labelledby="tabNav2-1">
+			내용2-1
+		</div>
+		<div class="tabContent" role="tabpanel" aria-labelledby="tabNav2-2">
+			내용2-2
+		</div>
+	</div>
+	<script>
+	commonUI.tabNav('.tab-feature2', 1);
+	</script>
+
+</div>
+<pre><code class="language-xml">&#x3C;div class=&#x22;tabWrap tab-base2 tab-feature2&#x22;&#x3E;
+&#x9;&#x3C;ul class=&#x22;tabNav&#x22;&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav2-1&#x22; role=&#x22;tab&#x22;&#x3E;tab1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x9;&#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; id=&#x22;tabNav2-2&#x22; role=&#x22;tab&#x22;&#x3E;tab2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x9;&#x3C;/ul&#x3E;
+&#x9;&#x3C;div class=&#x22;tabContent&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav2-1&#x22;&#x3E;
+&#x9;&#x9;&#xB0B4;&#xC6A9;2-1
+&#x9;&#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;tabContent&#x22; role=&#x22;tabpanel&#x22; aria-labelledby=&#x22;tabNav2-2&#x22;&#x3E;
+&#x9;&#x9;&#xB0B4;&#xC6A9;2-2
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;script&#x3E;
+commonUI.tabNav(&#x27;.tab-feature2&#x27;, 1);
+&#x3C;/script&#x3E;
+</code></pre>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

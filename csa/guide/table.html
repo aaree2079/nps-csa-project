@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>테이블</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">col type</h3>
+<div class="code-preview">
+
+	<div class="con-table">		
+		<table class="min-w600px" summary="테이블 예시">
+			<caption>제목</caption>
+			<colgroup>
+				<col><col><col><col><col><col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" rowspan="2">항목1</th>
+					<th scope="col">항목2</th>
+					<th scope="col">항목3</th>
+					<th scope="col">항목4</th>
+					<th scope="col">항목5</th>
+					<th scope="col">항목6</th>
+				</tr>
+				<tr>
+					<th scope="col">항목2-2</th>
+					<th scope="col">항목2-3</th>
+					<th scope="col" rowspan="2">항목2-4</th>
+					<th scope="col">항목2-5</th>
+					<th scope="col" rowspan="2">항목2-6</th>
+				</tr>
+				<tr>
+					<th scope="col" colspan="2">항목3-1</th>
+					<th scope="col">항목3-3</th>
+					<th scope="col">항목3-5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="2">th</th>
+					<th scope="row">th</th>
+					<td>기본 좌측 정렬</td>
+					<td class="align-center">중앙 정렬<br>align-center</td>
+					<td class="align-right">우측 정렬<br>align-right</td>
+					<td class="valign-top" rowspan="2">위로 정렬<br>valign-top</td>
+				</tr>
+				<tr>
+					<th scope="row">th</th>
+					<td>기본 좌측 정렬</td>
+					<td rowspan="2">기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+				<tr>
+					<th scope="row">th</th>
+					<th scope="row" rowspan="2">th</th>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+				<tr>
+					<th scope="row">th</th>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="con-table all-center">
+		<table summary="예상연금액(현재가치 기준), 수령 시작 연 월, 총 예상납입액 등이 나열된 테이블">
+			<caption>국민연금 예상연금액</caption>
+			<colgroup>
+				<col>
+				<col>
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">예상연금액(현재가치 기준)</th>
+					<th scope="col">수령 시작 연 월</th>
+					<th scope="col">총 예상납입액</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>매월 000 만원(연 0,000만원) 수령예상</td>
+					<td colspan="2">0000년</td>
+				</tr>
+				<tr>
+					<td rowspan="2">매월 000 만원(연 0,000만원) 수령예상</td>
+					<td>0000년</td>
+					<td>로그인이 필요합니다.</td>
+				</tr>
+				<tr>
+					<td>0000년</td>
+					<td>로그인이 필요합니다.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="con-table-header">
+		<h4 class="sm-title">테이블의 header가 있는 경우</h4>
+		<span class="txt-helper">단위 : 만원</span>
+	</div>
+	<div class="con-table">
+		<table class="min-w600px" summary="테이블 예시">
+			<caption>제목</caption>
+			<colgroup>
+				<col><col><col><col><col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">항목1</th>
+					<th scope="col">항목2</th>
+					<th scope="col">항목3</th>
+					<th scope="col">항목4</th>
+					<th scope="col">항목5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="2">th</th>
+					<td>기본 좌측 정렬</td>
+					<td class="align-center">중앙 정렬<br>align-center</td>
+					<td class="align-right">우측 정렬<br>align-right</td>
+					<td class="valign-top" rowspan="2">위로 정렬<br>valign-top</td>
+				</tr>
+				<tr>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+				<tr>
+					<th scope="row">th</th>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>tfoot</th>
+					<td></td>
+					<th>tfoot</th>
+					<td></td>
+					<td></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+
+	<br>
+	<table class="guide-table">
+		<col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th class="align-left">가로 스트롤 생성</th>
+				<td>&lt;div class="con-table"&gt; &lt;table class="min-w600px"&gt; </td>
+			</tr>
+			<tr>
+				<th class="align-left">전체 중앙 정렬</th>
+				<td>&lt;div class="con-table all-center"&gt;</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+<h3 class="sec-title">row type</h3>
+<div class="code-preview">
+
+	<div class="con-table type-row">
+		<table summary="테이블 예시">
+			<caption>제목</caption>
+			<colgroup>
+				<col class="w20 min-w120px"><col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">th</th>
+					<td>
+						<ul class="txt-list dot">
+							<li>내용입니다.</li>
+							<li>내용입니다.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">하이픈 & 대시</th>
+					<td>
+						<ul class="txt-list dash">
+							<li>하이픈-문장 부호의 하나. ‘－’의 이름이다. 차례대로 이어지는 내용을 하나로 묶어 열거할 때 쓰거나, 두 개 이상의 어구가 밀접한 관련이 있음을 나타낼 때 쓴다.</li>
+							<li>대시-문장 부호의 하나. ‘—’의 이름이다. 제목 다음에 표시하는 부제의 앞뒤에 쓴다.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>
+
+
+<h3 class="sec-title">데이타 테이블 div형태</h3>
+<div class="code-preview">
+
+	<div class="board-wrap bd-data">
+		<div class="bd-row">
+			<div class="bd-col w100">
+				<div class="th"><span>지역</span></div>
+				<div class="td"><span>노후준비 트랜드가 바뀐다</span></div>
+			</div>
+		</div>
+		<div class="bd-row">
+			<div class="bd-col">
+				<div class="th"><span>강사명</span><br><span>강사명</span><Br><span>강사명</span></div>
+				<div class="td"><span>홍길동</span></div>
+			</div>
+			<div class="bd-col">
+				<div class="th"><span>관할지사</span></div>
+				<div class="td"><span>통영지사</span></div>
+			</div>
+		</div>
+		<div class="bd-row">
+			<div class="bd-col">
+				<div class="th"><span>교육일자</span></div>
+				<div class="td"><span>2023-10-27</span></div>
+			</div>
+			<div class="bd-col">
+				<div class="th"><span>교육시간</span></div>
+				<div class="td"><span>10:00~12:00</span></div>
+			</div>
+		</div>
+		<div class="bd-row">
+			<div class="bd-col">
+				<div class="th"><span>교육장소</span></div>
+				<div class="td"><span>거제고용센터</span></div>
+			</div>
+			<div class="bd-col">
+				<div class="th"><span>정원</span></div>
+				<div class="td"><span>30명</span></div>
+			</div>
+		</div>
+		<div class="bd-row">
+			<div class="bd-col w100">
+				<div class="th"><span>휴대전화번호</span></div>
+				<div class="td">
+					<div class="form-group-tel">
+						<select class="tel-first" title="휴대전화 식별번호">
+							<option>선택</option>
+							<option>010</option>
+							<option>011</option>
+						</select><span class="inp-split">-</span><input type="text" class="tel-second" title="휴대전화 중간 번호"><span class="inp-split">-</span><input type="text" class="tel-third" title="휴대전화 뒷 번호">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

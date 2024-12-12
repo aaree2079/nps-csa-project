@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>국민연금연구원</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="../js/zoom.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+</head>
+<body>
+
+    <ul class="skip-nav">
+        <li><a href="#contents">본문 바로가기</a></li>
+        <li><a href="#gnav">주메뉴 바로가기</a></li>
+        <li><a href="#sideNav">서브메뉴 바로가기</a></li>
+        <li><a href="#footer">푸터 바로가기</a></li>
+    </ul>
+
+    <div id="wrap">
+        <header id="header">
+            <div class="header-top">
+                <h1><a href="#"><img src="../images/common/top_logo.png" alt="국민연금연구원"></a></h1>
+                <div class="zoom-control">
+                    <button type="button" class="zoomin" onclick="zoomInOut('#wrap', 'in')">글자크기 확대</button> 
+                    <button type="button" class="zoomout" onclick="zoomInOut('#wrap', 'out')">글자크기 축소</button>
+                </div>
+                <div class="top-links">
+                    <a href="#" class="go-eng" target="_blank" title="새창열림">ENG</a>
+                    <a href="#" class="go-guide" target="_blank" title="새창열림">이용자 가이드</a>
+                    <a href="#" class="go-nps" target="_blank" title="새창열림">국민연금공단</a>
+                </div>                
+                <!-- 모바일용 메뉴 -->
+                <button class="btn-menu-mobile"><span>메뉴</span></button>
+            </div>
+            <div class="header-nav">
+                <div class="gnav-inner">
+                    <nav id="gnav">
+                        <ul class="gnav-dep1">
+                            <li class="active"><a href="#">연구원 소개</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">원장인사말</a></li>
+                                    <li><a href="#">일반현황</a></li>
+                                    <li><a href="#">조직 및 인원현황</a>
+                                        <ul class="gnav-dep3">
+                                            <li><a href="#">조직도</a></li>
+                                            <li><a href="#">직원 및 연락처 찾기</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">찾아오시는 길</a></li>
+                                    <li><a href="#">연구수행과제</a>
+                                        <ul class="gnav-dep3">
+                                            <li><a href="#">연구수행과제</a></li>
+                                            <li><a href="#">연구과제제안</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">연구원 소식</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">새소식</a></li>
+                                    <li><a href="#">채용공고</a></li>
+                                    <li><a href="#">회의록</a></li>
+                                    <li><a href="#">해외통신원</a></li>
+                                    <li><a href="#" target="_blank" title="새창열림">제5차 재정계산</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">연구원 발간물</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">연구원 발간물</a></li>
+                                    <li><a href="#">조사통계</a></li>
+                                    <li><a href="#">자료실</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">외국의 연금제도</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">해외 연금제도</a></li>
+                                    <li><a href="#">해외 연금제도 동향</a></li>
+                                    <li><a href="#">해외 연금기금 운용현황</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">국민노후보장패널조사</a>
+                                <ul class="gnav-dep2">
+                                    <li><a href="#">전체</a></li>
+                                    <li><a href="#">소개</a></li>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">조사설계</a></li>
+                                    <li><a href="#">DATA</a>
+                                        <ul class="gnav-dep3">
+                                            <li><a href="#">DATA</a></li>
+                                            <li><a href="#">유저가이드</a></li>
+                                            <li><a href="#">코드북</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">조사표</a></li>
+                                    <li><a href="#">보고서</a>
+                                        <ul class="gnav-dep3">
+                                            <li><a href="#">기초분석 보고서</a></li>
+                                            <li><a href="#">테크니컬 리포트</a></li>
+                                            <li><a href="#">리서치 브리프</a></li>
+                                            <li><a href="#">자료 활용 리스트</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">학술대회</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="btn-menu-all">전체메뉴 열기</a>
+                </div>
+            </div>                
+            <div class="mobile-nav">
+                <div class="mobile-top-links">
+                    <a href="#" class="go-guide" target="_blank" title="새창열림">이용자 가이드</a>
+                    <a href="#" class="go-nps" target="_blank" title="새창열림">국민연금공단</a>
+                </div>
+                <nav id="gnav-m">
+                    <ul class="gnav-dep1">
+                        <li><a href="#">연구원 소개</a>
+                            <ul class="gnav-dep2">
+                                <li><a href="#">원장인사말</a></li>
+                                <li><a href="#">일반현황</a></li>
+                                <li><a href="#">조직 및 인원현황</a>
+                                    <ul class="gnav-dep3">
+                                        <li><a href="#">조직도</a></li>
+                                        <li><a href="#">직원 및 연락처 찾기</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                                <li><a href="#">연구수행과제</a>
+                                    <ul class="gnav-dep3">
+                                        <li><a href="#">연구수행과제</a></li>
+                                        <li><a href="#">연구과제제안</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">연구원 소식</a>
+                            <ul class="gnav-dep2">
+                                <li><a href="#">새소식</a></li>
+                                <li><a href="#">채용공고</a></li>
+                                <li><a href="#">회의록</a></li>
+                                <li><a href="#">해외통신원</a></li>
+                                <li><a href="#" target="_blank" title="새창열림">제5차 재정계산</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">연구원 발간물</a>
+                            <ul class="gnav-dep2">
+                                <li><a href="#">연구원 발간물</a></li>
+                                <li><a href="#">조사통계</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">외국의 연금제도</a>
+                            <ul class="gnav-dep2">
+                                <li><a href="#">해외 연금제도</a></li>
+                                <li><a href="#">해외 연금제도 동향</a></li>
+                                <li><a href="#">해외 연금기금 운용현황</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">국민노후보장패널조사</a>
+                            <ul class="gnav-dep2">
+                                <li><a href="#">전체</a></li>
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">조사설계</a></li>
+                                <li><a href="#">DATA</a>
+                                    <ul class="gnav-dep3">
+                                        <li><a href="#">DATA</a></li>
+                                        <li><a href="#">유저가이드</a></li>
+                                        <li><a href="#">코드북</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">조사표</a></li>
+                                <li><a href="#">보고서</a>
+                                    <ul class="gnav-dep3">
+                                        <li><a href="#">기초분석 보고서</a></li>
+                                        <li><a href="#">테크니컬 리포트</a></li>
+                                        <li><a href="#">리서치 브리프</a></li>
+                                        <li><a href="#">자료 활용 리스트</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">학술대회</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="conatiner">
+            <aside class="side-wrap" id="sideNav">
+                <div class="side-inner">
+                    <nav class="side-nav">
+                        <ul class="snav-list">
+                            <li class="home"><span>home</span></li>
+                            <li class="dep1"><button type="button">연구원 소개</button>
+                                <ul class="depth-list">
+                                    <li><a href="#">연구원 소개</a></li>
+                                    <li><a href="#">연구원 소식</a></li>
+                                    <li><a href="#">연구원 발간물</a></li>
+                                    <li><a href="#">외국의 연금제도</a></li>
+                                    <li><a href="#">국민노후보장패널조사</a></li>
+                                </ul>
+                            </li>
+                            <li class="dep2"><button type="button">원장인사말</button>
+                                <ul class="depth-list">
+                                    <li><a href="#">원장인사말</a></li>
+                                    <li><a href="#">일반현황</a></li>
+                                    <li><a href="#">조직 및 인원현황</a></li>
+                                    <li><a href="#">찾아오시는 길</a></li>
+                                    <li><a href="#">연구수행과제</a></li>
+                                </ul>
+                            </li>
+                            <li class="dep3"><button type="button">조직도</button>
+                                <ul class="depth-list">
+                                    <li><a href="#">조직도</a></li>
+                                    <li><a href="#">직원 및 연락처 찾기</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="btn-search-view">통합검색 바로가기</button>
+                </div>
+                <div class="top-search">
+                    <div class="top-search-inner">
+                        <fieldset>
+                            <legend>통합검색</legend>
+                            <input type="text" class="txt-keyword" id="searchTop" name="query" title="검색어 입력" placeholder="검색어를 입력하세요">
+                            <input type="submit" value="검색" class="btn-search">
+                        </fieldset>
+                        <button type="button" class="btn-search-close">통합검색 닫기</button>
+                    </div>
+                </div>
+            </aside>
+            <section class="content-wrap" id="contents">
+                <div class="sub-header">
+                    <h3 class="sub-title">원장인사말</h3>
+                    <nav class="sub-tab">
+                        <ul>
+                            <li class="active" title="선택됨"><a href="#">Data</a></li>
+                            <li><a href="#">유저가이드</a></li>
+                            <li><a href="#">코드북</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sub-contents">
+                    <!-- 서브내용 시작 -->
+
+                    <!-- 탭메뉴가 있는 경우 헤딩태그 있어야 함(접근성) -->
+                    <h4 class="blind">Data</h4>
+                    
+
+
+
+                    
+                    <!-- 서브내용 끝 -->
+                </div>                    
+                <!-- 만족도조사 -->
+                <div class="contents-bottom">
+                    <div class="page-satisfaction">                            
+                        <div class="satisfaction-header">
+                            <p class="slogan">“국민을 든든하게 연금을 튼튼하게”</p>
+                            <div class="person-info"><span class="label">담당:</span> 연금급여실 연금기획부 홍길동(063-713-0000)</div>
+                        </div>
+                        <div class="satisfaction-survey">    
+                            <fieldset>
+                            <legend>현재페이지 만족도 조사</legend>                        
+                            <div class="survey-form">                                
+                                <div class="survey-item">                                    
+                                    <p class="qustion">현재 페이지의 내용과 사용 편의성에 대해 만족하십니까?</p>
+                                    <ul class="options">
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>매우만족</span></label></li>
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>만족</span></label></li>
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>보통</span></label></li>
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>불만족</span></label></li>
+                                        <li><label class="inp-radio"><input type="radio" name="stat"><span>매우불만족</span></label></li>
+                                    </ul>                                    
+                                </div>
+                                <input type="button" value="확인" class="btn btn-submit">                               
+                            </div>      
+                            </fieldset>                      
+                        </div>
+                    </div>
+                    <div class="nps-callcenter">
+                        <h2 class="callcenter-title">국민연금 고객센터</h2>
+                        <div class="callcenter-number"><img src="../images/common/call_number.png" alt="상담전화는 국번없이 1355"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-links">
+                    <ul class="inner-links">
+                        <li><a href="#" class="privacy">개인정보처리방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">홈페이지 이용안내</a></li>
+                        <li><a href="#">RSS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <address>54870 전라북도 전주시 덕진구 기지로 180(만성동, 국민연금)</address>
+                    <p class="footer-notice">매월 마지막 토요일 00:00 ~ 04:00까지는 정기적인 서비스 점검으로 서비스 이용이 일시 중단됩니다. <br>
+                        본 홈페이지에 게시된 이메일 주소가 자동수집되는 것을 허용하지 않으며, 위반시 정보통신망법에 의해 처벌될 수 있습니다.</p>
+                    <p class="footer-copyright">Copyright. nps.or.kr. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- //wrapper -->
+</body>
+</html>

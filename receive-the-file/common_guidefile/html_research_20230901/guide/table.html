@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>테이블</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">col type</h3>
+<div class="code-preview">
+
+	<div class="con-table">		
+		<table class="min-w600px">
+			<caption>제목</caption>
+			<colgroup>
+				<col><col><col><col><col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">항목1</th>
+					<th scope="col">항목2</th>
+					<th scope="col">항목3</th>
+					<th scope="col">항목4</th>
+					<th scope="col">항목5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="2">th</th>
+					<td>기본 좌측 정렬</td>
+					<td class="align-center">중앙 정렬<br>align-center</td>
+					<td class="align-right">우측 정렬<br>align-right</td>
+					<td class="valign-top" rowspan="2">위로 정렬<br>valign-top</td>
+				</tr>
+				<tr>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+				<tr>
+					<th scope="row">th</th>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="con-table-header">
+		<h4 class="con-title">테이블의 header가 있는 경우</h4>
+		<div><span class="table-guide-txt">단위 : 원</span></div>
+	</div>
+	<div class="con-table">
+		<table class="min-w600px">
+			<caption>제목</caption>
+			<colgroup>
+				<col><col><col><col><col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">항목1</th>
+					<th scope="col">항목2</th>
+					<th scope="col">항목3</th>
+					<th scope="col">항목4</th>
+					<th scope="col">항목5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="2">th</th>
+					<td>기본 좌측 정렬</td>
+					<td class="align-center">중앙 정렬<br>align-center</td>
+					<td class="align-right">우측 정렬<br>align-right</td>
+					<td class="valign-top" rowspan="2">위로 정렬<br>valign-top</td>
+				</tr>
+				<tr>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+				<tr>
+					<th scope="row">th</th>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+					<td>기본 좌측 정렬</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<br>
+	<table class="guide-table">
+		<col style="width:160px"><col>
+		<tbody>
+			<tr>
+				<th class="align-left">가로 스트롤 생성</th>
+				<td>&lt;div class="con-table"&gt; &lt;table class="min-w600px"&gt; </td>
+			</tr>
+			<tr>
+				<th class="align-left">전체 중앙 정렬</th>
+				<td>&lt;div class="con-table all-center"&gt;</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+<h3 class="sec-title">row type</h3>
+<div class="code-preview">
+
+	<div class="con-table type-row">
+		<table>
+			<caption>제목</caption>
+			<colgroup>
+				<col class="w20 min-w120px"><col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">th</th>
+					<td>
+						<ul class="txt-list dot">
+							<li>내용입니다.</li>
+							<li>내용입니다.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">하이픈 & 대시</th>
+					<td>
+						<ul class="txt-list dash">
+							<li>하이픈-문장 부호의 하나. ‘－’의 이름이다. 차례대로 이어지는 내용을 하나로 묶어 열거할 때 쓰거나, 두 개 이상의 어구가 밀접한 관련이 있음을 나타낼 때 쓴다.</li>
+							<li>대시-문장 부호의 하나. ‘—’의 이름이다. 제목 다음에 표시하는 부제의 앞뒤에 쓴다.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>버튼</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<h3 class="sec-title">button tags</h3>
+<div class="code-preview">
+	<a href="#" class="btn contained primary">link</a>
+	<button type="button" class="btn contained primary">button</button>
+	<button type="submit" class="btn contained primary">submit</button>
+	<input type="button" class="btn contained primary" value="button">
+	<input type="submit" class="btn contained primary" value="submit">
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained primary&#x22;&#x3E;link&#x3C;/a&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn contained primary&#x22;&#x3E;button&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;submit&#x22; class=&#x22;btn contained primary&#x22;&#x3E;submit&#x3C;/button&#x3E;
+&#x3C;input type=&#x22;button&#x22; class=&#x22;btn contained primary&#x22; value=&#x22;button&#x22;&#x3E;
+&#x3C;input type=&#x22;submit&#x22; class=&#x22;btn contained primary&#x22; value=&#x22;submit&#x22;&#x3E;
+</code></pre>
+
+<h3 class="sec-title">contained</h3>
+<div class="code-preview">
+	<a href="#" class="btn contained">default</a>
+	<a href="#" class="btn contained primary">primary</a>
+	<a href="#" class="btn contained secondary">secondary</a>
+	<a href="#" class="btn contained disabled">disabled</a>
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained&#x22;&#x3E;default&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained primary&#x22;&#x3E;primary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained secondary&#x22;&#x3E;secondary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained disabled&#x22;&#x3E;disabled&#x3C;/a&#x3E;
+
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn contained&#x22;&#x3E;default&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn contained primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn contained secondary&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn contained&#x22; disabled&#x3E;disabled&#x3C;/button&#x3E;
+</code></pre>
+
+<h3 class="sec-title">outlined</h3>
+<div class="code-preview">
+	<a href="#" class="btn outlined" data-type="outlined">default</a>
+	<a href="#" class="btn outlined primary" data-type="outlined">primary</a>
+	<a href="#" class="btn outlined secondary" data-type="outlined">secondary</a>
+	<a href="#" class="btn outlined disabled" data-type="outlined">disabled</a>
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined&#x22; &#x3E;default&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined primary&#x22;&#x3E;primary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined secondary&#x22;&#x3E;secondary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined disabled&#x22;&#x3E;disabled&#x3C;/a&#x3E;
+
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined&#x22;&#x3E;default&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined secondary&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined&#x22; disabled&#x3E;disabled&#x3C;/button&#x3E;
+</code></pre>
+
+<h3 class="sec-title">color</h3>
+<div class="code-preview">
+<a href="#" class="btn contained" data-type="outlined">default</a>
+<a href="#" class="btn contained primary" data-type="outlined">primary</a>
+<a href="#" class="btn contained secondary" data-type="outlined">secondary</a>
+<a href="#" class="btn contained gray1" data-type="outlined">gray1</a>
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained&#x22; data-type=&#x22;outlined&#x22;&#x3E;default&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained primary&#x22; data-type=&#x22;outlined&#x22;&#x3E;primary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained secondary&#x22; data-type=&#x22;outlined&#x22;&#x3E;secondary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained gray1&#x22; data-type=&#x22;outlined&#x22;&#x3E;gray1&#x3C;/a&#x3E;
+</code></pre>
+
+<h3 class="sec-title">text</h3>
+<div class="code-preview">
+	<a href="#" class="btn text" data-type="text">default</a>
+	<a href="#" class="btn text primary" data-type="text">primary</a>
+	<a href="#" class="btn text secondary" data-type="text">secondary</a>
+	<a href="#" class="btn text disabled" data-type="text">disabled</a>
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;btn text&#x22; &#x3E;default&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn text primary&#x22;&#x3E;primary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn text secondary&#x22;&#x3E;secondary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn text disabled&#x22;&#x3E;disabled&#x3C;/a&#x3E;
+
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn text&#x22;&#x3E;default&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn text primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn text secondary&#x22;&#x3E;secondary&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn text&#x22; disabled&#x3E;disabled&#x3C;/button&#x3E;
+</code></pre>
+
+<h3 class="sec-title">Sizes</h3>
+<div class="code-preview">
+	<div class="row">
+		<button type="button" class="btn outlined primary small">small</button>
+		<button type="button" class="btn outlined primary">default</button>
+		<button type="button" class="btn outlined primary large">large</button>
+	</div>
+	<div class="row">
+		<button type="button" class="btn contained primary small">small</button>
+		<button type="button" class="btn contained primary">default</button>
+		<button type="button" class="btn contained primary large">large</button>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined primary small&#x22;&#x3E;small&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined primary&#x22;&#x3E;default&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn outlined primary large&#x22;&#x3E;large&#x3C;/button&#x3E;
+
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn contained primary small&#x22;&#x3E;small&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn contained primary&#x22;&#x3E;default&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn contained primary large&#x22;&#x3E;large&#x3C;/button&#x3E;
+</code></pre>
+
+<h3 class="sec-title">Round / Pill</h3>
+<div class="code-preview">
+
+	<div class="row">
+		<a href="#" class="btn contained primary round">primary</a>
+		<a href="#" class="btn outlined primary round">primary</a>
+	</div>
+	<div class="row">
+		<a href="#" class="btn contained primary pill">primary</a>
+		<a href="#" class="btn outlined primary pill">primary</a>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained primary round&#x22;&#x3E;primary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined primary round&#x22;&#x3E;primary&#x3C;/a&#x3E;
+
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained primary pill&#x22; &#x3E;primary&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined primary pill&#x22;&#x3E;primary&#x3C;/a&#x3E;
+</code></pre>
+
+
+<h3 class="sec-title">icon</h3>
+<div class="code-preview">
+
+	<div class="row">
+		<a href="#" class="btn contained small">새창열림 버튼<i class="i-window after" arir-hidden="true"></i></a>
+		<a href="#" class="btn contained gray1 large pill">개인정보활용 동의 하러가기<i class="i-window after" arir-hidden="true"></i></a>
+	</div>
+	<div class="row">
+		<a href="#" class="btn outlined primary large pill">법제처 출입국관리법 시행령<i class="i-go after" arir-hidden="true"></i></a>
+		<a href="#" class="btn outlined primary large pill">장애심사규정 내려받기<i class="i-down after" arir-hidden="true"></i></a>
+	</div>
+	<div class="row">
+		<a href="#" class="btn outlined primary large pill"><i class="i-list before" arir-hidden="true"></i>목록보기</a>
+		<a href="#" class="btn outlined primary large pill"><i class="i-calc before" arir-hidden="true"></i>모의계산 하기</a>
+	</div>
+</div>
+<pre><code class="language-xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained small&#x22;&#x3E;&#xC0C8;&#xCC3D;&#xC5F4;&#xB9BC; &#xBC84;&#xD2BC;&#x3C;i class=&#x22;i-window after&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn contained gray1 large pill&#x22;&#x3E;&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xD65C;&#xC6A9; &#xB3D9;&#xC758; &#xD558;&#xB7EC;&#xAC00;&#xAE30;&#x3C;i class=&#x22;i-window after&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined primary large pill&#x22;&#x3E;&#xBC95;&#xC81C;&#xCC98; &#xCD9C;&#xC785;&#xAD6D;&#xAD00;&#xB9AC;&#xBC95; &#xC2DC;&#xD589;&#xB839;&#x3C;i class=&#x22;i-go after&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined primary large pill&#x22;&#x3E;&#xC7A5;&#xC560;&#xC2EC;&#xC0AC;&#xADDC;&#xC815; &#xB0B4;&#xB824;&#xBC1B;&#xAE30;&#x3C;i class=&#x22;i-down after&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;
+
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined primary large pill&#x22;&#x3E;&#x3C;i class=&#x22;i-list before&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#xBAA9;&#xB85D;&#xBCF4;&#xAE30;&#x3C;/a&#x3E;
+&#x3C;a href=&#x22;#&#x22; class=&#x22;btn outlined primary large pill&#x22;&#x3E;&#x3C;i class=&#x22;i-calc before&#x22; arir-hidden=&#x22;true&#x22;&#x3E;&#x3C;/i&#x3E;&#xBAA8;&#xC758;&#xACC4;&#xC0B0; &#xD558;&#xAE30;&#x3C;/a&#x3E;
+</code></pre>
+
+			<!-- 내용끝 -->
+		</div>
+	</section>
+</div>
+
+</body>
+</html>

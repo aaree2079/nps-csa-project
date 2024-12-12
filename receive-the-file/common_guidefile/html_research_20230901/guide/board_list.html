@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=3.0,user-scalable=yes">
+	<title>UI 가이드</title>
+
+	<script src="../js/lib/jquery-3.7.0.min.js"></script>
+	<script src="../js/lib/jquery-ui.min.js"></script>
+	<script src="../js/lib/jquery.easing.min.js"></script>
+	<script src="../js/lib/swiper-bundle.min.js"></script>
+	<script src="ui_include.js"></script>
+	<script src="../js/ui_common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="guide.css">
+
+	<link rel="stylesheet" href="highlight/styles/stackoverflow-light.min.css">
+	<script src="highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
+<body>
+
+<div class="guideWrap">
+	<header class="guideHeader">
+	</header>
+	<section class="guideContainer">
+		<header class="sec-header">
+			<h2>테이블</h2>
+		</header>
+		<div class="sec-contents">
+			<!-- 내용시작 -->
+
+<div class="code-preview">
+
+	<fieldset>
+		<legend>게시물 검색</legend>	
+		<div class="data-list-top">
+			<div class="list-acount">
+				<span class="total">전체 : <em>123건</em></span>
+				<span class="page"><em class="current">1</em>/<span class="last">12</span> page</span>
+			</div>
+			<div class="list-search">
+				<div class="inp-item">
+					<select aria-label="검색범위" class="inp-select">
+						<option>제목</option>
+						<option>작성자</option>
+						<option>제목+내용</option>
+					</select>
+				</div>
+				<div class="inp-keyword">
+					<input type="text" aria-label="검색어" placeholder="검색어를 입력하세요." class="keyword">
+					<input type="submit" value="검색" class="btn-search">
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	
+	<div class="data-list">
+		<table>
+			<caption>제목</caption>
+			<colgroup>
+				<col class="w8"><col><col class="w15"><col class="w15"><col class="w8"><col class="w8">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">번호</th>
+					<th scope="col">제목</th>					
+					<th scope="col">작성부서</th>
+					<th scope="col">작성일</th>
+					<th scope="col">조회수</th>
+					<th scope="col">첨부</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="notice">
+					<td class="no"><em class="label-notice">공지</em></td>
+					<td class="title"><a href="#">사이버금융범죄 피해보상을 위한「국민연금 수급자 지원」 업무협약 체결 안내 사이버금융범죄 피해보상을 위한「국민연금 수급자 지원」 업무협약 체결 안내 <abbr title="new" class="label-new">N</abbr></a></td>					
+					<td class="writer">홍길동</a></td>
+					<td class="date">2023-01-01</td>
+					<td class="hit">100</td>
+					<td class="file"><img src="../images/common/ic_file_doc.svg" alt="첨부파일" class="img-file"></td>
+				</tr>
+				<tr class="notice">
+					<td class="no"><em class="label-notice">공지</em></td>
+					<td class="title"><a href="#">국민연금공단과 함께 만들어가는 투명하고 청렴한 세상</a></td>					
+					<td class="writer">홍길동</a></td>
+					<td class="date">2023-01-01</td>
+					<td class="hit">100</td>
+					<td class="file"><img src="../images/common/ic_file_hwp.svg" alt="첨부파일" class="img-file"></td>
+				</tr>
+				<tr>
+					<td class="no">475</td>
+					<td class="title"><a href="#">국민연금 지급일 : 8월 25일(금)</a></td>					
+					<td class="writer">홍길동</a></td>
+					<td class="date">2023-01-01</td>
+					<td class="hit">100</td>
+					<td class="file"><img src="../images/common/ic_file_jpg.svg" alt="첨부파일" class="img-file"></td>
+				</tr>
+				<tr>
+					<td class="no">475</td>
+					<td class="title"><a href="#">국민연금 지급일 : 8월 25일(금)</a></td>					
+					<td class="writer">홍길동</a></td>
+					<td class="date">2023-01-01</td>
+					<td class="hit">100</td>
+					<td class="file"><img src="../images/common/ic_file_pdf.svg" alt="첨부파일" class="img-file"></td>
+				</tr>
+				<tr>
+					<td class="no">474</td>
+					<td class="title"><a href="#">국민연금 지급일 : 7월 25일(화)</a></td>					
+					<td class="writer">홍길동</a></td>
+					<td class="date">2023-01-01</td>
+					<td class="hit">100</td>
+					<td class="file"><img src="../images/common/ic_file_ppt.svg" alt="첨부파일" class="img-file"></td>
+				</tr>
+				<tr>
+					<td class="no">474</td>
+					<td class="title"><a href="#">국민연금 지급일 : 7월 25일(화)</a></td>					
+					<td class="writer">홍길동</a></td>
+					<td class="date">2023-01-01</td>
+					<td class="hit">100</td>
+					<td class="file"><img src="../images/common/ic_file_xls.svg" alt="첨부파일" class="img-file"></td>
+				</tr>
+				<tr>
+					<td class="no">474</td>
+					<td class="title"><a href="#">국민연금 지급일 : 7월 25일(화)</a></td>					
+					<td class="writer">홍길동</a></td>
+					<td class="date">2023-01-01</td>
+					<td class="hit">100</td>
+					<td class="file"><img src="../images/common/ic_file_zip.svg" alt="첨부파일" class="img-file"></td>
+				</tr>
+				<tr>
+					<td class="no">474</td>
+					<td class="title"><a href="#">국민연금 지급일 : 7월 25일(화)</a></td>					
+					<td class="writer">홍길동</a></td>
+					<td class="date">2023-01-01</td>
+					<td class="hit">100</td>
+					<td class="file"><img src="../images/common/ic_file_etc.svg" alt="첨부파일" class="img-file"></td>
+				</tr>
+				<tr>
+					<td colspan="6" class="data-none">
+						<p>등록된 게시물이 없습니다.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="paging">
+		<a href="#" class="page first">처음 목록</a>
+		<a href="#" class="page prev">이전 목록</a>
+		<a href="#" class="num current" title="현재페이지">11</a>
+		<a href="#" class="num">12</a>
+		<a href="#" class="num">13</a>
+		<a href="#" class="num">14</a>
+		<a href="#" class="num">15</a>
+		<a href="#" class="num">16</a>
+		<a href="#" class="num">17</a>
+		<a href="#" class="num">18</a>
+		<a href="#" class="num">19</a>
+		<a href="#" class="num">20</a>
+		<a href="#" class="page next">다음 목록</a>
+		<a href="#" class="page last">마지막 목록</a>
+	</div>
+</div>	
+
+			<!-- 내용끝 -->
+		</div>	
+	</section>
+</div>
+
+</body>
+</html>
